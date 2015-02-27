@@ -1,7 +1,10 @@
-# Equipo6AdminProy
+# Equipo 6 Administracion de proyectos
+
 Trabajos Administracion de Proyectos Equipo 6
-Hector Villa Garcia Programado Master Modo DIOS 
 
-Hector José Sánchez Fernández
+Integrantes:
 
-Julian Alberto Aguilar Sandoval
+	Hector Villa Garcia Programado Master Modo DIOS 
+	Hector José Sánchez Fernández
+	Julian Alberto Aguilar Sandoval
+
