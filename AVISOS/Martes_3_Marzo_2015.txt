@@ -1,0 +1,3 @@
+Exposicion :
+	puntos por historia de usuario
+	SCRUM
