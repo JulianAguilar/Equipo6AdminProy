@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-03-14" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="es">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-03-03" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="es">
     <description/>
     <view zooming-state="default:0" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="55" order="0"/>
@@ -33,17 +33,16 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Fase A: Inicializacion" color="#000000" meeting="false" start="2015-03-02" duration="5" complete="0" expand="false">
+        <task id="0" name="Fase A: Inicializacion" color="#000000" meeting="false" start="2015-03-02" duration="5" complete="0" expand="true">
             <task id="8" name="Reunion" color="#8cb6ce" meeting="false" start="2015-03-02" duration="1" complete="0" expand="true"/>
-            <task id="9" name="Estimacion de HW y Sw" color="#8cb6ce" meeting="false" start="2015-03-03" duration="1" complete="0" expand="true"/>
-            <task id="10" name="Analisis de costos" color="#8cb6ce" meeting="false" start="2015-03-04" duration="1" complete="0" expand="true"/>
+            <task id="9" name="Estimacion deSw" color="#8cb6ce" meeting="false" start="2015-03-03" duration="1" complete="0" expand="true"/>
             <task id="11" name="Instalacion de programas de desarrollo" color="#8cb6ce" meeting="false" start="2015-03-05" duration="1" complete="0" expand="true"/>
             <task id="12" name="reunion" color="#8cb6ce" meeting="false" start="2015-03-05" duration="1" complete="0" expand="true"/>
             <task id="13" name="Entrega" color="#8cb6ce" meeting="false" start="2015-03-06" duration="1" complete="0" expand="true">
                 <depend id="21" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="21" name="Fase B" color="#000000" meeting="false" start="2015-03-09" duration="10" complete="0" expand="false">
+        <task id="21" name="Fase B" color="#000000" meeting="false" start="2015-03-09" duration="10" complete="0" expand="true">
             <task id="22" name="Reunion" color="#8cb6ce" meeting="false" start="2015-03-09" duration="1" complete="0" expand="true">
                 <depend id="23" type="3" difference="0" hardness="Strong"/>
             </task>
