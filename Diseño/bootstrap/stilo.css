@@ -7,7 +7,7 @@ html{
 body{
 
 	background-image: url(C:\Users\hectorjose\Documents\administracion de proyectos\bootstrap\img\ropa1.jpg);
-
+	background-size: 100%;
 }
 .boxlogin{
 	border-radius: 4px;
