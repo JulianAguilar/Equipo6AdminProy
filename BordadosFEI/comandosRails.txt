@@ -1,0 +1,13 @@
+rails new BordadosFEI
+set SSL_CERT_FILE=cacert.pem
+
+
+rails g scaffold Empleado Nombre:string Apellido_paterno:string Apellido_materno:string Direccion:text Telefono:string Puesto:string Nombre_usuario:string Password:text
+rails g scaffold Cliente Nombre:string Apellido_paterno:string Apellido_materno:string Direccion:text Telefono:string Correo:string
+rails g scaffold Proveedor Nombre:string Direccion:text Telefono:string Correo:string RFC:string
+rake db:create
+rake db:migrate
+
+
+<!-- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> -->
+  <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
