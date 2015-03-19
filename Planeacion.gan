@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-03-03" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="es">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-02-24" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="es">
     <description/>
     <view zooming-state="default:0" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="55" order="0"/>
@@ -70,7 +70,7 @@
             </task>
             <task id="267" name="Nueva estimacion" color="#8cb6ce" meeting="false" start="2015-03-20" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="108" name="Fase C" color="#000000" meeting="false" start="2015-03-23" duration="10" complete="0" expand="false">
+        <task id="108" name="Fase C" color="#000000" meeting="false" start="2015-03-23" duration="10" complete="0" expand="true">
             <task id="110" name="Reunion" color="#8cb6ce" meeting="false" start="2015-03-23" duration="1" complete="0" expand="true">
                 <depend id="112" type="3" difference="0" hardness="Strong"/>
             </task>
@@ -213,9 +213,9 @@
         <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="195" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="77" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="77" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="186" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="74" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="74" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
