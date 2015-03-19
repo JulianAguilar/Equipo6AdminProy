@@ -1,1 +1,0 @@
-rails new BordadosFEI -d=mysql
