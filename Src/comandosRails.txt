@@ -7,13 +7,9 @@ rails generate devise:install // gem 'device'
 set SSL_CERT_FILE=cacert.pem
 
 
-rails g scaffold Empleado Nombre:string Apellido_paterno:string Apellido_materno:string Direccion:text Telefono:string Puesto:string Nombre_usuario:string Password:text
+rails g scaffold Proveedors
 rake db:migrate
-rails g bootstrap:themed Empleados
-
-rails g scaffold Cliente Nombre:string Apellido_paterno:string Apellido_materno:string Direccion:text Telefono:string Correo:string
-
-rails g scaffold Proveedor Nombre:string Direccion:text Telefono:string Correo:string RFC:string
+rails g bootstrap:themed Proveedors RFC: string Nombre: string Direccion:string Telefono:string Producto:string 
 
 rake db:create
 rake db:migrate
