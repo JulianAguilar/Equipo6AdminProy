@@ -13,11 +13,13 @@ class ProveedorsController < ApplicationController
   end
 
   def new
+		@estaEditando = false
     @proveedor = Proveedor.new
     respond_with(@proveedor)
   end
 
   def edit
+					@estaEditando = true
   end
 
   def create
