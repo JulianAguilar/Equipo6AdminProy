@@ -17,8 +17,13 @@
 
   <div class="control-group">
     <%= f.label :RFC, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :RFC, :class => 'form-control' %>
+		<div class="controls">
+			<%= if @estaEditando 
+				 		f.text_field :RFC, :class => 'form-control' , disabled: true
+					else 
+						f.text_field :RFC, :class => 'form-control' 
+					end 
+			%>
     </div>
     <%= error_span(@proveedor[:RFC]) %>
   </div>
