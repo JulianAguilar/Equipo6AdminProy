@@ -28,4 +28,15 @@ rails g controller registrations
 rails generate controller welcome index
 
 
-config.sign_out_via = :get //en devise.rb
+config.sign_out_via = :get //en devise.rb  	before_action :authenticate_cliente!
+
+rails g devise Empleado
+rails generate migration nuevos campos
+
+Nombre
+Apellido_paterno
+Apellido_materno
+Direccion
+Telefono
+Puesto
+ rails g devise:views Empleados
