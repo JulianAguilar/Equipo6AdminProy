@@ -1,17 +1,15 @@
 rails new BordadosFEI -d=mysql
-
+// errores ssl -> set SSL_CERT_FILE=cacert.pem
 rails generate bootstrap:install static // gem "twitter-bootstrap-rails" en el gemfile
 rails g bootstrap:layout application
 rails generate devise:install // gem 'device'
 
-set SSL_CERT_FILE=cacert.pem
 
-
-rails g scaffold Proveedors
-rake db:migrate
-rails g bootstrap:themed Proveedors RFC: string Nombre: string Direccion:string Telefono:string Producto:string 
 
 rake db:create
+
+rails g scaffold Proveedor RFC:string Nombre:string Direccion:string Telefono:string Producto:string
 rake db:migrate
+rails g bootstrap:themed Proveedors
 
 

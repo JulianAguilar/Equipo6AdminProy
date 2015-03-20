@@ -1,0 +1,59 @@
+<%= form_for @proveedor, :html => { :class => "form-horizontal proveedor" } do |f| %>
+
+    <% if @proveedor.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@proveedor.errors.count, "error") %> prohibited this proveedor from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @proveedor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :RFC, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :RFC, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proveedor[:RFC]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Nombre, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proveedor[:Nombre]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Direccion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Direccion, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proveedor[:Direccion]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Telefono, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Telefono, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proveedor[:Telefono]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Producto, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Producto, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proveedor[:Producto]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            proveedors_path, :class => 'btn btn-default' %>
+
+<% end %>
