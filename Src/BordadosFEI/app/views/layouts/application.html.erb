@@ -34,7 +34,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
-    <%= javascript_include_tag "default" %>
+    <%= javascript_include_tag :defaults %>
   </head>
   <body>
 
@@ -48,7 +48,16 @@
         <a class="navbar-brand" href="#">BordadosFEI</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
+            <li>  <div id="user_nav">  
+ 										 <% if cliente_signed_in? %>  
+										    Signed in as <%= current_cliente.email %>. Not you? user_signed_in?
+												<%= link_to "Sign out", destroy_cliente_session_path %>  
+									  <% else %>  
+									    <%= link_to "Sign up", new_cliente_registration_path %> or  
+									    <%= link_to "Sign in", new_cliente_session_path %>  
+									  <% end %>  
+									</div>  
+					  </li>
             <li><%= link_to "Link2", "/path2"  %></li>
             <li><%= link_to "Link3", "/path3"  %></li>
           </ul>

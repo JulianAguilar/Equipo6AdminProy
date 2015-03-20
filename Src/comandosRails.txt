@@ -11,4 +11,21 @@ rake db:create
 rails g scaffold Proveedor RFC:string Nombre:string Direccion:string Telefono:string Producto:string
 rake db:migrate
 rails g bootstrap:themed Proveedors
+
 rails g devise Cliente
+rails generate migration AgregaNuevosCamposACliente
+
+Nombre
+Apellido_paterno
+Apellido_materno
+Direccion
+Telefono
+Correo
+rails g devise:views Clientes
+rails g controller registrations
+
+
+rails generate controller welcome index
+
+
+config.sign_out_via = :get //en devise.rb
