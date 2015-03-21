@@ -1,8 +1,13 @@
 rails new BordadosFEI -d=mysql
+Agregue al gemfile :
+	gem 'twitter-bootstrap-rails'
+	gem 'device'	
 
-rails generate bootstrap:install static // gem "twitter-bootstrap-rails" en el gemfile
+rails generate controller welcome index #descomente la linea  root 'welcome#index' de config/routes.rb
+
+rails generate bootstrap:install static
 rails g bootstrap:layout application
-rails generate devise:install // gem 'device'
+rails generate devise:install 
 
 set SSL_CERT_FILE=cacert.pem
 
