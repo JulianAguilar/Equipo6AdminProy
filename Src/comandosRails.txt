@@ -16,16 +16,16 @@ set SSL_CERT_FILE=cacert.pem
 rails g scaffold Proveedor RFC:string Nombre:string Direccion:string Telefono:string Producto:string
 modificacion de la migracion generada:
 ***********************************************************************************************************
-class CreateProveedors < ActiveRecord::Migration
+class CreateProveedores < ActiveRecord::Migration
   def change
-    create_table :proveedors, id: false do |t|
+    create_table :proveedores, id: false do |t|
       t.string :RFC, null: false
       t.string :Nombre
       t.string :Direccion
       t.string :Telefono
       t.string :Producto
     end
-		add_index :proveedors, :RFC, unique: true
+		add_index :proveedores, :RFC, unique: true
   end
 end
 **********************************************************************************************************
@@ -37,7 +37,9 @@ class Proveedor < ActiveRecord::Base
 end
 **********************************************************************************************************
 rake db:migrate
-rails g bootstrap:themed Proveedors
+rails g bootstrap:themed Proveedores
+
+
 
 rake db:create
 rake db:migrate
