@@ -1,11 +1,11 @@
-class ProveedorsController < ApplicationController
+class ProveedoresController < ApplicationController
   before_action :set_proveedor, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @proveedors = Proveedor.all
-    respond_with(@proveedors)
+    @proveedores = Proveedor.all
+    respond_with(@proveedores)
   end
 
   def show
@@ -13,13 +13,13 @@ class ProveedorsController < ApplicationController
   end
 
   def new
-					@estaeditando = false
+		@estaEditando = false
     @proveedor = Proveedor.new
     respond_with(@proveedor)
   end
 
   def edit
-					@estaeditando = true
+					@estaEditando = true
   end
 
   def create

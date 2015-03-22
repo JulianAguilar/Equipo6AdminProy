@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321145612) do
+ActiveRecord::Schema.define(version: 20150322160023) do
+
+  create_table "proveedores", id: false, force: true do |t|
+    t.string "RFC",       null: false
+    t.string "Nombre"
+    t.string "Direccion"
+    t.string "Telefono"
+    t.string "Producto"
+  end
+
+  add_index "proveedores", ["RFC"], name: "index_proveedores_on_RFC", unique: true, using: :btree
 
   create_table "proveedors", id: false, force: true do |t|
     t.string "RFC",       null: false

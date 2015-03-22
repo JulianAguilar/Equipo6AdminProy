@@ -12,6 +12,7 @@ rails generate devise:install
 set SSL_CERT_FILE=cacert.pem
 
 //NOTA: para que funcionen correctamente los scaffold hay que instalar node.js
+
 rails g scaffold Proveedor RFC:string Nombre:string Direccion:string Telefono:string Producto:string
 modificacion de la migracion generada:
 ***********************************************************************************************************

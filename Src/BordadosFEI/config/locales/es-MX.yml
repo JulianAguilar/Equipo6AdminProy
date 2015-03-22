@@ -137,6 +137,7 @@ es-MX:
         one: "%{model} no pudo guardarse debido a 1 error"
         other: "%{model} no pudo guardarse debido a %{count} errores"
   helpers:
+    actions: Acciones
     select:
       prompt: Por favor selecciona
     submit:
@@ -149,6 +150,10 @@ es-MX:
       edit: Editar
       destroy: Eliminar
       back: Regresar
+      confirm: ¿Estas seguro?
+    titles:
+      edit: Editar %{model}
+      new: Nuevo %{model}
      
 
   number:
