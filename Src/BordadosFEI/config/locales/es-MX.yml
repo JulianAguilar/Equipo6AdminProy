@@ -96,6 +96,10 @@ es-MX:
       month: Mes
       second: Segundos
       year: Año
+  device:
+    registrations:
+      empleado:
+        signed_up: has 
   errors:
     format: "%{attribute} %{message}"
     messages:

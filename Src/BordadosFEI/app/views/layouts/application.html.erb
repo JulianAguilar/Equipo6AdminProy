@@ -56,7 +56,14 @@
       </div>
     </div>
 
-    <div class="container">
+		<div class="container">
+			<!--<div class="row">
+				<div class="col-lg-9">
+					<p class="notice"><%= notice %></p>
+ 					<p class="alert"><%= alert %></p>
+				</div>
+			</div>
+			-->
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
@@ -71,7 +78,11 @@
           </div><!--/.well -->
         </div><!--/span-->
       </div><!--/row-->
-
+			<% if current_empleado %>
+    Welcome <%= current_empleado.email %> <%= link_to 'Logout', destroy_empleado_session_path, method: :delete %>
+<% else %>
+    <%= link_to 'Login', new_empleado_session_path %>
+<% end %>
       <footer>
         <p>&copy; Administracion de proyectos - Equipo 6  |  2015</p>
       </footer>

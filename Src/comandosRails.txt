@@ -39,6 +39,10 @@ end
 rake db:migrate
 rails g bootstrap:themed Proveedores
 
+rails generate devise Empleado
+rake db:migrate
+rails g devise:views Empleados
+rails generate devise:controllers Empleados
 
 
 rake db:create

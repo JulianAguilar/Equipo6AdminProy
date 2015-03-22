@@ -44,6 +44,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-i18n (0.11.4)
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.4.0)
@@ -132,6 +133,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
+  devise-i18n
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
