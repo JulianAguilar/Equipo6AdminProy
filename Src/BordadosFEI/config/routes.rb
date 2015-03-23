@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'panelcliente/index'
+
+  get 'panelempleado/index'
+
   devise_for :clientes
   devise_for :empleados
   resources :proveedores

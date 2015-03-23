@@ -34,8 +34,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
-		<%= javascript_include_tag 'application' %>
-		<% csrf_meta_tag %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body>
 
@@ -46,24 +45,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">BordadosFEI</a>
+        <a class="navbar-brand" href="#">Panel empleados</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Clientes", "/panelcliente/index"  %></li>
-            <li><%= link_to "Empleados", "/panelempleado/index"  %></li>
+            <li><%= link_to "Link1", "/path1"  %></li>
+            <li><%= link_to "Link2", "/path2"  %></li>
+            <li><%= link_to "Link3", "/path3"  %></li>
           </ul>
         </div>
       </div>
     </div>
 
-		<div class="container">
-			<!--<div class="row">
-				<div class="col-lg-9">
-					<p class="notice"><%= notice %></p>
- 					<p class="alert"><%= alert %></p>
-				</div>
-			</div>
-			-->
+    <div class="container">
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
@@ -71,16 +64,22 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Informacion</h3>
+            <h3>Empleado</h3>
             <ul class="nav nav-list">
-              <li><%= link_to "Hola", "/path1"  %></li>
+							<% if empleado_signed_in? %>
+  							<li> Usuario <strong><%= current_empleado.email %></strong>.</li>
+								<li> <%= link_to 'Edit profile', edit_empleado_registration_path, :class => 'navbar-link' %> </li>
+  							<li><%= link_to "Logout", destroy_empleado_session_path, method: :delete, :class => 'navbar-link'  %></li>
+							<% else %>
+								<li>  <%= link_to "Login", new_empleado_session_path, :class => 'navbar-link'  %> </li>
+							<% end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
       </div><!--/row-->
-			
+
       <footer>
-        <p>&copy; Administracion de proyectos - Equipo 6  |  2015</p>
+        <p>&copy; Company 2015</p>
       </footer>
 
     </div> <!-- /container -->
