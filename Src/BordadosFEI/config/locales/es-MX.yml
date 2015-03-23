@@ -158,7 +158,18 @@ es-MX:
     titles:
       edit: Editar %{model}
       new: Nuevo %{model}
-     
+    label:
+      empleado:
+        remember_me: Recordar sesion
+        password: Nuevo Password
+        password_confirmation: Confirma el nuevo password
+        current_password: Password actual
+
+      cliente:
+        remember_me: Recordar sesion
+        password: Nuevo Password
+        password_confirmation: Confirma el nuevo password
+        current_password: Password actual
 
   number:
     currency:

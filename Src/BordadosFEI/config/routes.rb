@@ -3,10 +3,15 @@ Rails.application.routes.draw do
 
   get 'panelempleado/index'
 
-  devise_for :clientes
-  devise_for :empleados
+  devise_for :clientes, :controllers => {registrations: 'clientes/registrations'}
+  devise_for :empleados, :controllers => {registrations: 'empleados/registrations'}
+	resources :panelempleado
+	authenticated :empleado do
+  	root :to => "panelempleado#index", as: :empleado_root
+	end
   resources :proveedores
   get 'welcome/index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

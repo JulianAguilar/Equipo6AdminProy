@@ -50,11 +50,19 @@ class Empleados::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
-  #   super(resource)
+  #   super(resource)<
   # end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+	private
+	def sign_up_params
+    params.require(:empleado).permit(:Nombre, :Apellido_paterno, :Apellido_materno, :Direccion, :Telefono, :Puesto, :email, :password, :password_confirmation)
+  end
+ 
+  def account_update_params
+    params.require(:empleado).permit(:Nombre, :Apellido_paterno, :Apellido_materno, :Direccion, :Telefono, :Puesto, :email, :password, :password_confirmation, :current_password)
+  end
 end

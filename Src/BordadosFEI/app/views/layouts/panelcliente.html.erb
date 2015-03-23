@@ -48,9 +48,8 @@
         <a class="navbar-brand" href="/panelcliente/index">Panel de clientes</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+									<!-- <li><%= link_to "Link1", "/path1"  %></li> -->
+            
           </ul>
         </div>
       </div>
@@ -68,11 +67,11 @@
             <ul class="nav nav-list">
               	<% if cliente_signed_in? %>
   								<li> Usuario <strong><%= current_cliente.email %></strong>.</li>
-									<li> <%= link_to 'Edit profile', edit_cliente_registration_path, :class => 'navbar-link' %> </li>
-  								<li><%= link_to "Logout", destroy_cliente_session_path, method: :delete, :class => 'navbar-link'  %></li>
+									<li> <%= link_to 'Editar cuenta', edit_cliente_registration_path, :class => 'navbar-link' %> </li>
+  								<li><%= link_to "Salir", destroy_cliente_session_path, method: :delete, :class => 'navbar-link'  %></li>
 								<% else %>
-									<li> <%= link_to "Sign up", new_cliente_registration_path, :class => 'navbar-link'  %> </li>
-									<li>  <%= link_to "Login", new_cliente_session_path, :class => 'navbar-link'  %> </li>
+									<li> <%= link_to "Registrarse", new_cliente_registration_path, :class => 'navbar-link'  %> </li>
+									<li>  <%= link_to "Iniciar sesion", new_cliente_session_path, :class => 'navbar-link'  %> </li>
 								<% end %>
             </ul>
           </div><!--/.well -->

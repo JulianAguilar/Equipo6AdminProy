@@ -48,9 +48,7 @@
         <a class="navbar-brand" href="#">Panel empleados</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+									<!--<li><%= link_to "Link1", "/path1"  %></li>-->
           </ul>
         </div>
       </div>
@@ -68,10 +66,10 @@
             <ul class="nav nav-list">
 							<% if empleado_signed_in? %>
   							<li> Usuario <strong><%= current_empleado.email %></strong>.</li>
-								<li> <%= link_to 'Edit profile', edit_empleado_registration_path, :class => 'navbar-link' %> </li>
-  							<li><%= link_to "Logout", destroy_empleado_session_path, method: :delete, :class => 'navbar-link'  %></li>
+								<li> <%= link_to 'Editar perfil', edit_empleado_registration_path, :class => 'navbar-link' %> </li>
+  							<li><%= link_to "Salir", destroy_empleado_session_path, method: :delete, :class => 'navbar-link'  %></li>
 							<% else %>
-								<li>  <%= link_to "Login", new_empleado_session_path, :class => 'navbar-link'  %> </li>
+								<li>  <%= link_to "Iniciar sesion", new_empleado_session_path, :class => 'navbar-link'  %> </li>
 							<% end %>
             </ul>
           </div><!--/.well -->
