@@ -28,6 +28,7 @@
 					<%= f.label :Puesto, :class => 'form-label' %> <br/>
 					<%= 
 									f.select :Puesto, options_for_select([['Gerente general','Gerente general'],['Vendedor de mostrador','Vendedor de mostrador'],['Empleado de serigrafia','Empleado de serigrafia'],['Bordadora','Bordadora']],:selected => f.object.Puesto),{},{class: 'form-control'}  %> 
+	</div>
  	<div class="field">
     <%= f.label :email %><br />
 		<%= f.email_field :email, :class => 'form-control' %>
