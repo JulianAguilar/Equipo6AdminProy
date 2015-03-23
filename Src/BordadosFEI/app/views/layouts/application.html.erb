@@ -78,11 +78,7 @@
           </div><!--/.well -->
         </div><!--/span-->
       </div><!--/row-->
-			<% if current_empleado %>
-    Welcome <%= current_empleado.email %> <%= link_to 'Logout', destroy_empleado_session_path, method: :delete %>
-<% else %>
-    <%= link_to 'Login', new_empleado_session_path %>
-<% end %>
+			
       <footer>
         <p>&copy; Administracion de proyectos - Equipo 6  |  2015</p>
       </footer>
