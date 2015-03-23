@@ -1,0 +1,49 @@
+<h2>Crear cuenta cliente</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+	<div class="field">
+		<%= f.label :Nombre %> <br/>
+		<%= f.text_field :Nombre, autofocus: true %>
+	</div>
+	<div class="field">
+		<%= f.label :Apellido_paterno %> <br/>
+		<%= f.text_field :Apellido_paterno %>
+	</div>
+	<div class="field">
+		<%= f.label :Apellido_materno %> <br/>
+		<%= f.text_field :Apellido_materno %>
+	</div>
+	<div class="field">
+		<%= f.label :Direccion %> <br/>
+		<%= f.text_field :Direccion %>
+	</div>
+	<div class="field">
+		<%= f.label :Telefono %> <br/>
+		<%= f.text_field :Telefono %>
+	</div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "Clientes/shared/links" %>
