@@ -1,34 +1,66 @@
 rails new BordadosFEI -d=mysql
-// errores ssl -> set SSL_CERT_FILE=cacert.pem
-rails generate bootstrap:install static // gem "twitter-bootstrap-rails" en el gemfile
+
+Agregue al gemfile :
+	gem 'twitter-bootstrap-rails'
+	gem 'device'	
+
+rails generate controller welcome index #descomente la linea  root 'welcome#index' de config/routes.rb
+
+rails generate bootstrap:install static
 rails g bootstrap:layout application
-rails generate devise:install // gem 'device'
-//gem 'cancan'
+rails generate devise:install
 
 
-rake db:create
+//NOTA: para que funcionen correctamente los scaffold hay que instalar node.js
 
 rails g scaffold Proveedor RFC:string Nombre:string Direccion:string Telefono:string Producto:string
+modificacion de la migracion generada:
+***********************************************************************************************************
+class CreateProveedores < ActiveRecord::Migration
+  def change
+    create_table :proveedores, id: false do |t|
+      t.string :RFC, null: false
+      t.string :Nombre
+      t.string :Direccion
+      t.string :Telefono
+      t.string :Producto
+    end
+		add_index :proveedores, :RFC, unique: true
+  end
+end
+**********************************************************************************************************
+Modificacion del modelo proveedor.rb
+**********************************************************************************************************
+class Proveedor < ActiveRecord::Base
+	validates :RFC, :Nombre, :Direccion, :Telefono, :Producto, presence: true
+	validates :RFC, uniqueness: true,  format: { with: /\A[A-ZÑ&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9]([A-Z0-9]{3})?\z/i, message: 'no es un formato de RFC válido' }
+end
+**********************************************************************************************************
 rake db:migrate
-rails g bootstrap:themed Proveedors
+rails g bootstrap:themed Proveedores
 
-rails g devise Cliente
-rails generate migration AgregaNuevosCamposACliente
+rails generate devise Empleado
+rake db:migrate
+rails g devise:views Empleados
+rails generate devise:controllers Empleados
 
-Nombre
-Apellido_paterno
-Apellido_materno
-Direccion
-Telefono
-Correo
+rails generate devise Cliente
+rake db:migrate
 rails g devise:views Clientes
-rails g controller registrations
+rails generate devise:controllers Clientes
 
 
-rails generate controller welcome index
+rails g controller panelempleado index
+rails g bootstrap:layout panelempleado
 
+rails g controller panelcliente index
+rails g bootstrap:layout panelcliente
 
-config.sign_out_via = :get //en devise.rb  	before_action :authenticate_cliente!
+rails g migration agregaCamposCliente
+rails g migration agregaCamposEmpleado
+
+//modifica archivo de resgrsitration agrega rutas a routs.rb 
+>>>>>>> desarrolloProveedores
 
 rails g devise Empleado
 rails generate migration nuevos campos
