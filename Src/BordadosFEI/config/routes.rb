@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  get 'panelcliente/index'
+  
 
+	resources :opempleados
   get 'panelempleado/index'
+	
+
+
+
 
   devise_for :clientes, :controllers => {registrations: 'clientes/registrations'}
   devise_for :empleados, :controllers => {registrations: 'empleados/registrations'}
