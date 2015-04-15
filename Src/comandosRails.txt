@@ -67,3 +67,6 @@ rails generate migration
  rails g devise:views Empleados
 
 rails g controller opempleados index destroy edit show update
+
+rails g scaffold Material Nombre:string Descripcion:text cantidad:integer
+rails g bootstrap:themed Materiales

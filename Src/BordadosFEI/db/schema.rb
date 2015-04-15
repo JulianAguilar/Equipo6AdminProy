@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323021902) do
+ActiveRecord::Schema.define(version: 20150415211252) do
 
   create_table "clientes", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -60,6 +60,12 @@ ActiveRecord::Schema.define(version: 20150323021902) do
   add_index "empleados", ["email"], name: "index_empleados_on_email", unique: true, using: :btree
   add_index "empleados", ["reset_password_token"], name: "index_empleados_on_reset_password_token", unique: true, using: :btree
 
+  create_table "materiales", force: true do |t|
+    t.string  "Nombre"
+    t.text    "Descripcion"
+    t.integer "cantidad"
+  end
+
   create_table "proveedores", id: false, force: true do |t|
     t.string "RFC",       null: false
     t.string "Nombre"
@@ -69,6 +75,5 @@ ActiveRecord::Schema.define(version: 20150323021902) do
   end
 
   add_index "proveedores", ["RFC"], name: "index_proveedores_on_RFC", unique: true, using: :btree
-
 
 end

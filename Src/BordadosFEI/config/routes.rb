@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :materiales
+
 	resources :opempleados
   get 'panelempleado/index'
 	
