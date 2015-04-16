@@ -1,6 +1,6 @@
 class MaterialesController < ApplicationController
   before_action :set_material, only: [:show, :edit, :update, :destroy]
-
+	before_action :authenticate_empleado!
   respond_to :html
 
   def index
