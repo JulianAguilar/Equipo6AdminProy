@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :mercancias
+
   resources :materiales
 
 	resources :opempleados

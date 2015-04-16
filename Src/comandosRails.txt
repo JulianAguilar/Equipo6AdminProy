@@ -70,3 +70,6 @@ rails g controller opempleados index destroy edit show update
 
 rails g scaffold Material Nombre:string Descripcion:text cantidad:integer
 rails g bootstrap:themed Materiales
+
+rails g scaffold Mercancia Nombre:string Descripcion:text Cantidad:integer Precio:float
+rails g bootstrap:themed Mercancias
