@@ -1,13 +1,48 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  Nombre: MyString
-  Descripcion: MyText
+correcto:
+  Nombre: tela de gamusa
+  Descripcion: tela con muchisimos pelitos
+  Cantidad: 12
+  Precio: 112.6
+
+incorrecto_sin_nombre:
+  Nombre: 
+  Descripcion: tela sin pelitos
   Cantidad: 1
   Precio: 1.5
 
-two:
-  Nombre: MyString
-  Descripcion: MyText
-  Cantidad: 1
-  Precio: 1.5
+
+incorrecto_sin_descripcion:
+  Nombre: botones rojos 
+  Descripcion: 
+  Cantidad: 345
+  Precio: 0.5
+
+
+incorrecto_sin_cantidad:
+  Nombre: hilo negro
+  Descripcion: hilo del numerp 100 color negro mate
+  Cantidad: 
+  Precio: 5.5
+
+ 
+incorrecto_sin_precio:
+  Nombre: hilo azul
+  Descripcion: hilo azul de cera grueso
+  Cantidad: 200
+  Precio:      
+
+ 
+incorrecto_cantidad_erronea:
+  Nombre: gorra azul
+  Descripcion: una gorra azul con vicera
+  Cantidad: asas
+  Precio: 150
+
+
+incorrecto_precio_erroneo:
+  Nombre: sudadera roja 
+  Descripcion: sudadera con logo de lo que se indique
+  Cantidad: 200
+  Precio: ae

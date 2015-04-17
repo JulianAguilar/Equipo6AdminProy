@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  RFC: MyString
-  Nombre: MyString
-  Direccion: MyString
-  Telefono: MyString
-  Producto: MyString
+correcto:
+  RFC: VIGH930425HVZ04 
+  Nombre: Telas carmin SA de CV
+  Direccion: Istmo N4
+  Telefono: 2282145602
+  Producto: Telas moradas
 
-two:
-  RFC: MyString
-  Nombre: MyString
-  Direccion: MyString
-  Telefono: MyString
-  Producto: MyString
+incorrecto:
+  RFC: undos
+  Nombre: Textieles maguey
+  Direccion: Unidad del bosque N32
+  Telefono: 2245678912
+  Producto: Hilos de cera

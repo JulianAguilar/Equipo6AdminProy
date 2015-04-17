@@ -73,3 +73,7 @@ rails g bootstrap:themed Materiales
 
 rails g scaffold Mercancia Nombre:string Descripcion:text Cantidad:integer Precio:float
 rails g bootstrap:themed Mercancias
+
+
+
+rails g cancan:ability

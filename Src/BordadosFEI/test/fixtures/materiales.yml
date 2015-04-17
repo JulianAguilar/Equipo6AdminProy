@@ -1,11 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  Nombre: MyString
-  Descripcion: MyText
-  cantidad: 1
+correcto:
+  Nombre: Camisa con logo de coca cola
+  Descripcion: camisa de tipo polo con logo de coca-cola company
+  cantidad: 12
 
-two:
-  Nombre: MyString
-  Descripcion: MyText
-  cantidad: 1
+incorrecto_sin_nombre:
+  Nombre: 
+  Descripcion: esto es un error no deberia de insertarse
+  cantidad: 31
+
+incorrecto_sin_descripcion:
+  Nombre: camisa blanca
+  Descripcion:
+  cantidad: 332
+
+incorrecto_sin_cantidad:
+  Nombre: Gorra de campaña
+  Descripcion: Una gorra roja con logo del partido politico
+  cantidad: 
+
+incorrecto_cantidad_erronea:
+  Nombre: Morral con logo de tienda
+  Descripcion: El logo de la tienda que se da cada año
+  cantidad: 12avc
+
+
+
