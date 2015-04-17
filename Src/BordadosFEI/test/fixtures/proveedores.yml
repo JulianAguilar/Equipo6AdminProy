@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 correcto:
-  RFC: VIGH930425HVZ04 
+  RFC: VIGH930425
   Nombre: Telas carmin SA de CV
   Direccion: Istmo N4
   Telefono: 2282145602
