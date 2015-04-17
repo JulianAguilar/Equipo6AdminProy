@@ -42,4 +42,4 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'node'
 gem 'devise-i18n'
-
+gem 'cancan'
