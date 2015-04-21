@@ -1,0 +1,33 @@
+pagina inicial simple
+Clientes
+	el login de clientes se abre con la alerta de un error
+	los botones del login se muestran de forma vertical
+	el boton eliminar cuenta solo la marque como inactiva
+	panel de clientes vacio
+	pagina de passwor olvidado
+		boton de reenviar correo visualizacion
+
+Empleados
+	el login de empleados muestra una alerta de error
+	panel de empleados vacio
+	botones de forma vertical
+	boton eliminar cuenta solo la marque como inactiva
+	se muestra boton de registrarse en el login
+	se muestra el boton de contraseña olvidada en el login
+	falta gestion de clientes
+
+GestionEmpleados
+	no se pueden crear mas de un empleado
+	faltan asignacion de roles
+	falta campo de inactivo en la tabla empleados
+	
+Proveedores
+	solo hay un producto por proveedor no para varios productos por proveedor
+MateriaPrima
+	faltan campos del ER
+	no hay relacion con proveedores
+Mercancia
+	faltan campos del ER
+	
+	
+	
