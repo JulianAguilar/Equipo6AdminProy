@@ -7,6 +7,8 @@ Clientes
 	pagina de passwor olvidado
 		boton de reenviar correo visualizacion
 
+	agregar pruebas
+
 Empleados
 	el login de empleados muestra una alerta de error
 	panel de empleados vacio
@@ -15,6 +17,7 @@ Empleados
 	se muestra boton de registrarse en el login
 	se muestra el boton de contraseña olvidada en el login
 	falta gestion de clientes
+	agregar pruebas
 
 GestionEmpleados
 	no se pueden crear mas de un empleado

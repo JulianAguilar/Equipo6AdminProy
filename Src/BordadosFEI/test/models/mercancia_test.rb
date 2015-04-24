@@ -45,7 +45,4 @@ class MercanciaTest < ActiveSupport::TestCase
 		mercancia = mercancias(:incorrecto_precio_erroneo)
 		assert !mercancia.save, "se ha almacenado mercancia con el precio incorrecto"
 	end
-
-
-
 end
