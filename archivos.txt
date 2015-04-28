@@ -1,0 +1,335 @@
+Listado de rutas de carpetas
+El n£mero de serie del volumen es 00000200 84D7:FB4F
+C:.
+³   actualizarGemas.bat
+³   cacert.pem
+³   comandosRails.txt
+³   ERRORESYPROBLEMAS.txt
+³   
+BordadosFEI
+    ³   .gitignore
+    ³   config.ru
+    ³   Gemfile
+    ³   Gemfile.lock
+    ³   Rakefile
+    ³   README.rdoc
+    ³   
+    app
+    ³   assets
+    ³   ³   images
+    ³   ³   ³       .keep
+    ³   ³   ³       
+    ³   ³   javascripts
+    ³   ³   ³       application.js
+    ³   ³   ³       bootstrap.js.coffee
+    ³   ³   ³       materiales.js.coffee
+    ³   ³   ³       mercancias.js.coffee
+    ³   ³   ³       opempleados.js.coffee
+    ³   ³   ³       panelcliente.js.coffee
+    ³   ³   ³       panelempleado.js.coffee
+    ³   ³   ³       proveedores.js.coffee
+    ³   ³   ³       proveedors.js.coffee
+    ³   ³   ³       registrations.js.coffee
+    ³   ³   ³       welcome.js.coffee
+    ³   ³   ³       
+    ³   ³   stylesheets
+    ³   ³           application.css
+    ³   ³           bootstrap_and_overrides.css
+    ³   ³           materiales.css.scss
+    ³   ³           mercancias.css.scss
+    ³   ³           opempleados.css.scss
+    ³   ³           panelcliente.css.scss
+    ³   ³           panelempleado.css.scss
+    ³   ³           proveedores.css.scss
+    ³   ³           proveedors.css.scss
+    ³   ³           registrations.css.scss
+    ³   ³           scaffolds.css.scss
+    ³   ³           welcome.css.scss
+    ³   ³           
+    ³   controllers
+    ³   ³   ³   application_controller.rb
+    ³   ³   ³   materiales_controller.rb
+    ³   ³   ³   mercancias_controller.rb
+    ³   ³   ³   opempleados_controller.rb
+    ³   ³   ³   panelcliente_controller.rb
+    ³   ³   ³   panelempleado_controller.rb
+    ³   ³   ³   proveedores_controller.rb
+    ³   ³   ³   welcome_controller.rb
+    ³   ³   ³   
+    ³   ³   Clientes
+    ³   ³   ³       confirmations_controller.rb
+    ³   ³   ³       omniauth_callbacks_controller.rb
+    ³   ³   ³       passwords_controller.rb
+    ³   ³   ³       registrations_controller.rb
+    ³   ³   ³       sessions_controller.rb
+    ³   ³   ³       unlocks_controller.rb
+    ³   ³   ³       
+    ³   ³   concerns
+    ³   ³   ³       .keep
+    ³   ³   ³       
+    ³   ³   Empleados
+    ³   ³           confirmations_controller.rb
+    ³   ³           omniauth_callbacks_controller.rb
+    ³   ³           passwords_controller.rb
+    ³   ³           registrations_controller.rb
+    ³   ³           sessions_controller.rb
+    ³   ³           unlocks_controller.rb
+    ³   ³           
+    ³   helpers
+    ³   ³       application_helper.rb
+    ³   ³       materiales_helper.rb
+    ³   ³       mercancias_helper.rb
+    ³   ³       opempleados_helper.rb
+    ³   ³       panelcliente_helper.rb
+    ³   ³       panelempleado_helper.rb
+    ³   ³       proveedores_helper.rb
+    ³   ³       registrations_helper.rb
+    ³   ³       welcome_helper.rb
+    ³   ³       
+    ³   mailers
+    ³   ³       .keep
+    ³   ³       
+    ³   models
+    ³   ³   ³   .keep
+    ³   ³   ³   ability.rb
+    ³   ³   ³   cliente.rb
+    ³   ³   ³   empleado.rb
+    ³   ³   ³   material.rb
+    ³   ³   ³   mercancia.rb
+    ³   ³   ³   proveedor.rb
+    ³   ³   ³   
+    ³   ³   concerns
+    ³   ³           .keep
+    ³   ³           
+    ³   views
+    ³       Clientes
+    ³       ³   confirmations
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   mailer
+    ³       ³   ³       confirmation_instructions.html.erb
+    ³       ³   ³       reset_password_instructions.html.erb
+    ³       ³   ³       unlock_instructions.html.erb
+    ³       ³   ³       
+    ³       ³   passwords
+    ³       ³   ³       edit.html.erb
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   registrations
+    ³       ³   ³       edit.html.erb
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   sessions
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   shared
+    ³       ³   ³       _links.html.erb
+    ³       ³   ³       
+    ³       ³   unlocks
+    ³       ³           new.html.erb
+    ³       ³           
+    ³       Empleados
+    ³       ³   confirmations
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   mailer
+    ³       ³   ³       confirmation_instructions.html.erb
+    ³       ³   ³       reset_password_instructions.html.erb
+    ³       ³   ³       unlock_instructions.html.erb
+    ³       ³   ³       
+    ³       ³   passwords
+    ³       ³   ³       edit.html.erb
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   registrations
+    ³       ³   ³       edit.html.erb
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   sessions
+    ³       ³   ³       new.html.erb
+    ³       ³   ³       
+    ³       ³   shared
+    ³       ³   ³       _links.html.erb
+    ³       ³   ³       
+    ³       ³   unlocks
+    ³       ³           new.html.erb
+    ³       ³           
+    ³       layouts
+    ³       ³       application.html.erb
+    ³       ³       panelcliente.html.erb
+    ³       ³       panelempleado.html.erb
+    ³       ³       
+    ³       materiales
+    ³       ³       edit.html.erb
+    ³       ³       index.html.erb
+    ³       ³       index.json.jbuilder
+    ³       ³       new.html.erb
+    ³       ³       show.html.erb
+    ³       ³       show.json.jbuilder
+    ³       ³       _form.html.erb
+    ³       ³       
+    ³       mercancias
+    ³       ³       edit.html.erb
+    ³       ³       index.html.erb
+    ³       ³       index.json.jbuilder
+    ³       ³       new.html.erb
+    ³       ³       show.html.erb
+    ³       ³       show.json.jbuilder
+    ³       ³       _form.html.erb
+    ³       ³       
+    ³       opempleados
+    ³       ³       destroy.html.erb
+    ³       ³       edit.html.erb
+    ³       ³       index.html.erb
+    ³       ³       index.json.jbuilder
+    ³       ³       new.html.erb
+    ³       ³       show.html.erb
+    ³       ³       update.html.erb
+    ³       ³       
+    ³       panelcliente
+    ³       ³       index.html.erb
+    ³       ³       
+    ³       panelempleado
+    ³       ³       index.html.erb
+    ³       ³       
+    ³       proveedores
+    ³       ³       edit.html.erb
+    ³       ³       index.html.erb
+    ³       ³       index.json.jbuilder
+    ³       ³       new.html.erb
+    ³       ³       show.html.erb
+    ³       ³       show.json.jbuilder
+    ³       ³       _form.html.erb
+    ³       ³       
+    ³       welcome
+    ³               index.html.erb
+    ³               
+    bin
+    ³       bundle
+    ³       rails
+    ³       rake
+    ³       
+    config
+    ³   ³   application.rb
+    ³   ³   boot.rb
+    ³   ³   database.yml
+    ³   ³   environment.rb
+    ³   ³   routes.rb
+    ³   ³   secrets.yml
+    ³   ³   
+    ³   environments
+    ³   ³       development.rb
+    ³   ³       production.rb
+    ³   ³       test.rb
+    ³   ³       
+    ³   initializers
+    ³   ³       assets.rb
+    ³   ³       backtrace_silencers.rb
+    ³   ³       cookies_serializer.rb
+    ³   ³       devise.rb
+    ³   ³       filter_parameter_logging.rb
+    ³   ³       inflections.rb
+    ³   ³       mime_types.rb
+    ³   ³       session_store.rb
+    ³   ³       wrap_parameters.rb
+    ³   ³       
+    ³   locales
+    ³           devise.en.yml
+    ³           devise.es.yml
+    ³           en.bootstrap.yml
+    ³           en.yml
+    ³           es-MX.yml
+    ³           es.bootstrap.yml
+    ³           
+    db
+    ³   ³   schema.rb
+    ³   ³   seeds.rb
+    ³   ³   
+    ³   migrate
+    ³           20150320133708_agrega_nuevos_campos_a_cliente.rb
+    ³           20150322160023_create_proveedores.rb
+    ³           20150322182401_devise_create_empleados.rb
+    ³           20150322231617_devise_create_clientes.rb
+    ³           20150323020154_agrega_campos_cliente.rb
+    ³           20150323021902_agrega_campos_empleado.rb
+    ³           20150415211252_create_materiales.rb
+    ³           20150416132749_create_mercancias.rb
+    ³           
+    lib
+    ³   assets
+    ³   ³       .keep
+    ³   ³       
+    ³   tasks
+    ³           .keep
+    ³           
+    log
+    ³       .keep
+    ³       
+    public
+    ³       404.html
+    ³       422.html
+    ³       500.html
+    ³       favicon.ico
+    ³       robots.txt
+    ³       
+    test
+    ³   ³   test_helper.rb
+    ³   ³   
+    ³   controllers
+    ³   ³       .keep
+    ³   ³       materiales_controller_test.rb
+    ³   ³       mercancias_controller_test.rb
+    ³   ³       opempleados_controller_test.rb
+    ³   ³       panelcliente_controller_test.rb
+    ³   ³       panelempleado_controller_test.rb
+    ³   ³       proveedores_controller_test.rb
+    ³   ³       proveedors_controller_test.rb
+    ³   ³       registrations_controller_test.rb
+    ³   ³       welcome_controller_test.rb
+    ³   ³       
+    ³   fixtures
+    ³   ³       .keep
+    ³   ³       clientes.yml
+    ³   ³       empleados.yml
+    ³   ³       materiales.yml
+    ³   ³       mercancias.yml
+    ³   ³       proveedores.yml
+    ³   ³       proveedors.yml
+    ³   ³       
+    ³   helpers
+    ³   ³       .keep
+    ³   ³       materiales_helper_test.rb
+    ³   ³       mercancias_helper_test.rb
+    ³   ³       opempleados_helper_test.rb
+    ³   ³       panelcliente_helper_test.rb
+    ³   ³       panelempleado_helper_test.rb
+    ³   ³       proveedores_helper_test.rb
+    ³   ³       proveedors_helper_test.rb
+    ³   ³       registrations_helper_test.rb
+    ³   ³       welcome_helper_test.rb
+    ³   ³       
+    ³   integration
+    ³   ³       .keep
+    ³   ³       
+    ³   mailers
+    ³   ³       .keep
+    ³   ³       
+    ³   models
+    ³           .keep
+    ³           cliente_test.rb
+    ³           empleado_test.rb
+    ³           material_test.rb
+    ³           mercancia_test.rb
+    ³           proveedor_test.rb
+    ³           
+    tmp
+    ³   cache
+    ³       assets
+    vendor
+        assets
+            javascripts
+            ³       .keep
+            ³       
+            stylesheets
+                    .keep
+                    
