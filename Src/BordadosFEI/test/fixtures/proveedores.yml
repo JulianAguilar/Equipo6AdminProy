@@ -1,13 +1,45 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  RFC: MyString
-  Nombre: MyString
-  Direccion: MyString
-  Telefono: MyString
+correcto:
+  RFC: VIGH930425
+  Nombre: Telas del golfo
+  Direccion: Istmo Num 4 col. veracruz
+  Telefono: 2282145602
 
-two:
-  RFC: MyString
-  Nombre: MyString
-  Direccion: MyString
-  Telefono: MyString
+incorrecto_RFC:
+  RFC: VIG
+  Nombre: Telas del golfo
+  Direccion: Agua Marina Num 2000
+  Telefono: 234544433
+
+incorrecto_nombre:
+  RFC: VIGH920425
+  Nombre: 
+  Direccion: Agua marina N. 33
+  Telefono: 228215602
+
+incorrecto_direccion:
+  RFC: VIGH80123
+  Nombre: Hector's hilos
+  Direccion:
+  Telefono: 8124399
+
+incorrecto_telefono:
+  RFC: GARE971016
+  Nombre: Robles agujas
+  Direccion: manatiales N 115
+  Telefono:
+
+incorrecto_tipo_telefono:
+  RFC: SADR930817
+  Nombre: Rogelio y asociados
+  Direccion: Carolino anaya n245
+  Telefono: uno dos tres
+
+incorrecto_longitud_telefono:
+  RFC: GARS580817
+  Nombre: Telas del socorro
+  Direccion: Mitla n 216 Col. veracruz
+  Telefono: 123
+
+
