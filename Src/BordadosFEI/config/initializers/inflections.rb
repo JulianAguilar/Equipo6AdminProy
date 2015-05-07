@@ -16,4 +16,5 @@
 # end
 ActiveSupport::Inflector.inflections do |inflect|
 				inflect.irregular 'proveedor', 'proveedores'
+				inflect.irregular 'material', 'materiales'
 end

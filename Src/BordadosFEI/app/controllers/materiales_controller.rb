@@ -1,0 +1,76 @@
+class MaterialesController < ApplicationController
+  before_action :set_material, only: [:show, :edit, :update, :destroy]
+
+  # GET /materiales
+  # GET /materiales.json
+  def index
+    @materiales = Material.all
+  end
+
+  # GET /materiales/1
+  # GET /materiales/1.json
+  def show
+  end
+
+  # GET /materiales/new
+  def new
+    @material = Material.new
+  end
+
+  # GET /materiales/1/edit
+  def edit
+  end
+
+  # POST /materiales
+  # POST /materiales.json
+  def create
+    @material = Material.new(material_params)
+		@proveedor = Proveedor.find( material_params[:proveedor_id])
+		@material.proveedor = @proveedor
+
+    respond_to do |format|
+      if @material.save
+        format.html { redirect_to @material, notice: 'Material was successfully created.' }
+        format.json { render :show, status: :created, location: @material }
+      else
+        format.html { render :new }
+        format.json { render json: @material.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /materiales/1
+  # PATCH/PUT /materiales/1.json
+  def update
+    respond_to do |format|
+      if @material.update(material_params)
+        format.html { redirect_to @material, notice: 'Material was successfully updated.' }
+        format.json { render :show, status: :ok, location: @material }
+      else
+        format.html { render :edit }
+        format.json { render json: @material.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /materiales/1
+  # DELETE /materiales/1.json
+  def destroy
+    @material.destroy
+    respond_to do |format|
+      format.html { redirect_to materiales_url, notice: 'Material was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_material
+      @material = Material.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def material_params
+      params.require(:material).permit(:Nombre, :Descripcion, :Cantidad, :Unidad, :Costo_Unidad, :Costo_Total, :proveedor_id)
+    end
+end

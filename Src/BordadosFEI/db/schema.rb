@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501141916) do
+ActiveRecord::Schema.define(version: 20150505194004) do
+
+  create_table "materiales", force: true do |t|
+    t.string  "Nombre"
+    t.text    "Descripcion"
+    t.float   "Cantidad",     limit: 24
+    t.string  "Unidad"
+    t.float   "Costo_Unidad", limit: 24
+    t.float   "Costo_Total",  limit: 24
+    t.integer "proveedor_id"
+  end
+
+  add_index "materiales", ["proveedor_id"], name: "index_materiales_on_proveedor_id", using: :btree
 
   create_table "proveedores", id: false, force: true do |t|
     t.string "RFC",       null: false

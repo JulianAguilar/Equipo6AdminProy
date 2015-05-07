@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :materiales
+
   get 'welcome/index'
 
   resources :proveedores
