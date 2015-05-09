@@ -1,0 +1,35 @@
+html{
+
+	  margin: 0px;
+	  padding: 0px;
+}
+
+body{
+
+	background-image: 
+}
+
+#contenedor { margin: 0 auto; padding: 0 10px; width: 940px; _width: 960px; text-align: left; overflow: hidden; background: ; 
+}
+
+
+
+.jumbotron{
+
+    background-repeat: no-repeat;
+	color: black;
+}
+.boxlogin{
+
+	border-radius: 4px;
+	margin: 100px auto;
+	width: 280px;
+
+
+	-webki-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+input[type="submit"]{
+	margin-top: 14px; 
+}

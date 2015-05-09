@@ -1,0 +1,26 @@
+html{
+
+	  margin: 0px;
+	  padding: 0px;
+}
+
+body{
+
+	
+	
+
+}
+.jumbotron{
+
+    background-repeat: no-repeat;
+	color: black;
+	margin: 50px;
+	padding: 0px;
+}
+
+
+input[type="submit"]{
+	margin-top: 14px; 
+
+
+}
