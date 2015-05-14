@@ -5,8 +5,8 @@ Partes que debe contener la entrega final:
 *Parte del sistema funcional
 
 *Documentacion:
-  -Estimacion 
-  -Costos
+  -Estimacion : Lista casos Uso, Calculo de casos de uso, Historias de Usuario
+  -Costos : 
   -Cambios 
   -Aprendizaje
   -Evaluacion Lider Proyecto
