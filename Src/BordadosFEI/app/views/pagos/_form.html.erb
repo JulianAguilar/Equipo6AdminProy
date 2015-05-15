@@ -1,0 +1,37 @@
+<%= form_for(@pago,html: {class: 'form-horizontal'}) do |f| %>
+  <% if @pago.errors.any? %>
+    <div class="form-group">
+      <div class="col-sm-2"></div>
+      <div  class=" col-sm-6 ">
+        <div class="alert alert-danger">
+          <% if @pago.errors.count > 1 %>
+            <h3>Han ocurrido <%= @pago.errors.count %>  errores:</h3>
+          <% else %>
+            <h3>Han ocurrido un error:</h3>
+          <% end %>
+          <ul>
+            <% @pago.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h3>Pedido id : <%= @pago.Pedido.id %> </h3>
+    <h3>Subtotal : $<%=  number_with_precision(@pago.Subtotal,:precision => 2) %> </h3>
+    <h3>Total : $<%= number_with_precision(@pago.Total,:precision => 2) %></h3>
+    
+    
+  </div>
+  <%= f.hidden_field :Total %>
+  <%= f.hidden_field :Subtotal %>
+  <%= f.hidden_field :Pedido_id %>
+  <%= f.hidden_field :FechaPago %>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-danger"%>
+  </div>
+<% end %>

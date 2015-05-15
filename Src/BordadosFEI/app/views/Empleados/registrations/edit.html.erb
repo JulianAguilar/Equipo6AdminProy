@@ -1,0 +1,91 @@
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2>Empleado</h2>
+      </div> <!-- heading -->
+      <div class="panel-body">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="form-group row">
+          <%= f.label :Nombre, :class => 'form-label col-sm-2' %> 
+          <div class="col-sm-10">
+            <%= f.text_field :Nombre, :class => 'form-control' %>
+          </div>
+  </div>
+  <div class="form-group row">
+          <%= f.label :Direccion, :class => 'form-label col-sm-2' %>
+          <div class="col-sm-10">
+          <%= f.text_field :Direccion, :class => 'form-control' %>
+        </div>
+
+  </div>
+  <div class="form-group row">
+          <%= f.label :Telefono, :class => 'form-label col-sm-2' %>
+          <div class="col-sm-10">
+          <%= f.text_field :Telefono , :class => 'form-control' %>
+        </div>
+  </div>
+  <div class="form-group row">
+            <%= f.label :Puesto, :class => 'form-label col-sm-2' %> 
+            <div class="col-sm-10">
+              <%= 
+                  f.select :Puesto, options_for_select([['Gerente general','Gerente general']],:selected => f.object.Puesto),{},{class: 'form-control'}  %> 
+              </div>
+          </div>
+  <div class="form-group row">
+    <%= f.label :email , :class => 'form-label col-sm-2' %> <br/>
+    <div class="col-sm-10">
+    <%= f.email_field :email, autofocus: true , :class => 'form-control' %>
+  </div>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+    <%= f.label :password , :class => 'form-label' %> <i>(dejealo en blanco si no deseas cambiarlo)</i>
+    </div>
+    <div class="col-sm-10">
+      <%= f.password_field :password, autocomplete: "off" , :class => 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+    <%= f.label :password_confirmation, :class => 'form-label' %> 
+  </div>
+    <div class="col-sm-10">
+    <%= f.password_field :password_confirmation, autocomplete: "off" , :class => 'form-control' %>
+  </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+    <%= f.label :current_password , :class => 'form-label' %> <i>(Es necesario tu password actual para confimar los cambios)</i>
+  </div>
+    <div class="col-sm-10">
+    <%= f.password_field :current_password, autocomplete: "off", :class => 'form-control' %>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+    <%= f.submit "Actualizar" , :class => 'btn btn-info' %>
+  </div>
+  </div>
+<% end %>
+
+
+
+      </div> <!-- panel-body -->
+      <div class="panel-footer">
+        <%= link_to "Regresar", :back , :class => 'btn btn-success' %>
+      </div> <!-- panel-footer -->
+    </div> <!-- panel -->
+  </div> <!-- col-sm-8 -->
+  <div class="col-sm-4"></div>
+

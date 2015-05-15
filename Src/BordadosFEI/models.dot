@@ -1,0 +1,16 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Cliente" [shape=Mrecord, label="{Cliente|id :integer\lemail :string\lencrypted_password :string\lreset_password_token :string\lreset_password_sent_at :datetime\lremember_created_at :datetime\lsign_in_count :integer\lcurrent_sign_in_at :datetime\llast_sign_in_at :datetime\lcurrent_sign_in_ip :string\llast_sign_in_ip :string\lNombre :string\lDireccion :string\lTelefono :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Empleado" [shape=Mrecord, label="{Empleado|id :integer\lemail :string\lencrypted_password :string\lreset_password_token :string\lreset_password_sent_at :datetime\lremember_created_at :datetime\lsign_in_count :integer\lcurrent_sign_in_at :datetime\llast_sign_in_at :datetime\lcurrent_sign_in_ip :string\llast_sign_in_ip :string\lNombre :string\lDireccion :string\lTelefono :string\lPuesto :string\lEstado :boolean\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Material" [shape=Mrecord, label="{Material|id :integer\lNombre :string\lDescripcion :string\lCantidad :float\lUnidad :string\lCostoUnidad :float\lCostoTotal :float\lProveedor_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Mercancia" [shape=Mrecord, label="{Mercancia|id :integer\lDescripcion :string\lCantidad :float\lTerminado :boolean\lProducto_id :integer\lPedido_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Pago" [shape=Mrecord, label="{Pago|id :integer\lFechaPago :date\lSubtotal :float\lTotal :float\lPedido_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Pedido" [shape=Mrecord, label="{Pedido|id :integer\lFechaPedido :date\lFechaEntrega :date\lCliente_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Producto" [shape=Mrecord, label="{Producto|id :integer\lNombre :string\lDescripcion :text\lCosto :float\l}"]
+	"Proveedor" [shape=Mrecord, label="{Proveedor|id :integer\lRFC :string\lNombre :string\lDireccion :string\lTelefono :string\l}"]
+	"Cliente" -> "Pedido" [arrowtail=odot, arrowhead=crow, dir=both color="#5A5C1E"]
+	"Material" -> "Mercancia" [arrowtail=crow, arrowhead=crow, dir=both color="#DAC2D0"]
+	"Pedido" -> "Pago" [arrowtail=odot, arrowhead=dot, dir=both color="#F9B351"]
+	"Pedido" -> "Mercancia" [arrowtail=crow, arrowhead=crow, dir=both color="#6347DA"]
+	"Proveedor" -> "Material" [arrowtail=odot, arrowhead=crow, dir=both color="#465E3E"]
+}

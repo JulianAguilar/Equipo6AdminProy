@@ -1,0 +1,62 @@
+correcto:
+  Nombre: tela rosada con terciopelo
+  Descripcion: Tela de color rosado con textura sueve
+  Cantidad: 245
+  Unidad: metros
+  CostoUnidad: 1.5
+  CostoTotal: 245 
+  Proveedor_id: correcto
+
+incorrecto_sin_nombre:
+  Nombre: 
+  Descripcion: Un carrete de hilo de cañamo
+  Cantidad: 1
+  Unidad: carrete
+  CostoUnidad: 200
+  CostoTotal: 200
+  Proveedor_id: correcto_dos
+
+incorrecto_sin_descripcion:
+  Nombre: Botones de tres agujeros
+  Descripcion: Botones medianos de tres agujeros para camisas y pantalones
+  Cantidad: 10000
+  Unidad: pieza
+  CostoUnidad: 0.50
+  CostoTotal: 5000
+  Proveedor_id: correcto
+
+incorrecto_sin_cantidad:
+  Nombre: Pasta serigrafiadora roja
+  Descripcion: Pasta de la marca acme color rojo para serigrafiar
+  Cantidad: 
+  Unidad: galon
+  CostoUnidad: 200
+  CostoTotal: 200
+  Proveedor_id: correcto_dos
+
+incorrecto_sin_unidad:
+  Nombre: Camisas tipo polo
+  Descripcion: camisas polo de manga corta color blanco
+  Cantidad: 100
+  Unidad: 
+  CostoUnidad: 50
+  CostoTotal: 5000
+  Proveedor_id: correcto
+
+incorrecto_sin_costo_unidad:
+  Nombre: Hilos delgados 
+  Descripcion: carrtes de hilos negros delgados para coser
+  Cantidad: 100
+  Unidad: carrete
+  CostoUnidad: 
+  CostoTotal: 1000
+  Proveedor_id: correcto_dos
+
+incorrecto_sin_proveedor:
+  Nombre: Boton ultramini
+  Descripcion: Botones miniatura para camisas y ornamentales
+  Cantidad: 1000
+  Unidad: pieza
+  CostoUnidad: .10
+  CostoTotal: 10
+  Proveedor_id: 

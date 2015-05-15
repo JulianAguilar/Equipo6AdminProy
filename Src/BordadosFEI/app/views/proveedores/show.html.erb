@@ -1,0 +1,35 @@
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+  	<div class="panel panel-default">
+  		<div class="panel-heading">
+  			<h3>Proveedor</h3>
+  		</div>
+  		<div class="panel-body">
+  			<% if notice != nil %>
+  				<div class="alert alert-info" role="alert">
+    				<p id="notice"><%= notice %></p>
+    			</div>
+    		<% end %>
+			<p>
+  				<strong>Rfc:</strong>
+  				<%= @proveedor.RFC %>
+			</p>
+			<p>
+  				<strong>Nombre:</strong>
+  				<%= @proveedor.Nombre %>
+			</p>
+			<p>
+  				<strong>Direccion:</strong>
+  				<%= @proveedor.Direccion %>
+			</p>
+			<p>
+  				<strong>Telefono:</strong>
+  				<%= @proveedor.Telefono %>
+			</p>
+  		</div>
+  		<div class="panel-footer">
+  			<%= link_to 'Edit', edit_proveedor_path(@proveedor), class: 'btn btn-info' %> 
+  			<%= link_to 'Back', proveedores_path, class: 'btn btn-warning' %>
+  		</div>
+  	</div>
+</div>

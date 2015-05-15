@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Descripcion: MyString
+  Cantidad: 1.5
+  Terminado: false
+  Producto_id: 
+  Pedido_id: 
+
+two:
+  Descripcion: MyString
+  Cantidad: 1.5
+  Terminado: false
+  Producto_id: 
+  Pedido_id: 

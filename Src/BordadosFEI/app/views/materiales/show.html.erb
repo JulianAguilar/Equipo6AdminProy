@@ -1,0 +1,48 @@
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>Material</h3>
+    </div>
+    <div class="panel-body">    
+      <% if notice != nil %>
+        <div class="alert alert-info" role="alert">
+          <p id="notice"><%= notice %></p>
+        </div>
+      <% end %>
+
+      <p>
+        <strong>Nombre:</strong>
+        <%= @material.Nombre %>
+      </p>
+      <p>
+        <strong>Descripcion:</strong>
+        <%= @material.Descripcion %>
+      </p>
+      <p>
+        <strong>Cantidad:</strong>
+        <%= @material.Cantidad %>
+      </p>
+      <p>
+        <strong>Unidad:</strong>
+        <%= @material.Unidad %>
+      </p>
+      <p>
+        <strong>Costounidad:</strong>
+        <%= @material.CostoUnidad %>
+      </p>
+      <p>
+        <strong>Costototal:</strong>
+        <%= @material.CostoTotal %>
+      </p>
+      <p>
+        <strong>Proveedor:</strong>
+        <%= @material.Proveedor.Nombre %>
+      </p>
+    </div>
+    <div class="panel-footer">      
+      <%= link_to 'Edit', edit_material_path(@material), class: 'btn btn-info' %> 
+      <%= link_to 'Back', materiales_path, class: 'btn btn-warning' %>
+    </div>
+  </div>
+</div>

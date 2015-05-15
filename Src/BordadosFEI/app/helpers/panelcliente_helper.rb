@@ -1,0 +1,2 @@
+module PanelclienteHelper
+end

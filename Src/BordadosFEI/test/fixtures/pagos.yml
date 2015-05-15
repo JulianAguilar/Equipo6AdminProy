@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FechaPago: 2015-05-14
+  Subtotal: 1.5
+  Total: 1.5
+  Pedido_id: 
+
+two:
+  FechaPago: 2015-05-14
+  Subtotal: 1.5
+  Total: 1.5
+  Pedido_id: 
