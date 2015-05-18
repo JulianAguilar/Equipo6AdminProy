@@ -1,43 +1,9 @@
 Rails.application.routes.draw do
-
-  get 'panelcliente/index'
-
-  get 'panelempleado/index'
-
-  get 'welcome/index'
-
-  get 'lclientes/index'
-
-  get 'lclientes/cpedidos'
-
-  resources :mercancias
-
-  resources :pagos
-
-  resources :materiales
-
-  resources :pedidos
-
-  devise_for :empleados, :controllers => {registrations: 'empleados/registrations'}
-    resources :panelempleado
-    authenticated :empleado do
-        root :to => "panelempleado#index", as: :empleado_root
-    end
-
-  devise_for :clientes, :controllers => { registrations: 'clientes/registrations' }
-    resources :panelcliente
-    authenticated :cliente do
-      root :to => "panelcliente#index", as: :cliente_root
-    end
-  resources :productos
-
-  resources :proveedores
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
