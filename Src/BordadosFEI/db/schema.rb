@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518150856) do
+ActiveRecord::Schema.define(version: 20150518170039) do
 
   create_table "empleados", force: true do |t|
     t.string   "email",                             default: "", null: false
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20150518150856) do
     t.string   "Nombre"
     t.string   "Direccion"
     t.string   "Telefono"
-    t.string   "Puesto"
     t.float    "Sueldo",                 limit: 24
     t.string   "role"
     t.datetime "created_at"
