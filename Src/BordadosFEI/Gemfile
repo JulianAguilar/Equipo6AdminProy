@@ -41,7 +41,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
 
 gem 'cancancan', '~> 1.10'
-#descomentada linea de config/initializers/devise.rb tambien se cambio a true
-#	config.scoped_views = true
-#descomentada linea de config/initializers/devise.rb tambien se cambio a true
-#	config.scoped_views = true
+gem "twitter-bootstrap-rails"
