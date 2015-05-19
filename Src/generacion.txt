@@ -1,0 +1,15 @@
+rails new -d=mysql
+
+#agrega a gem file
+ gem 'devise'
+ gem 'cancancan'
+
+rails generate devise:install
+
+
+
+
+
+
+#https://github.com/plataformatec/devise/wiki/How-To:-Manage-Users-with-an-Admin-Role-(CanCan-method)
+rails g controller Empleado index new create edit update destroy
