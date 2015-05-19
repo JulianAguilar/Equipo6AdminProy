@@ -32,7 +32,7 @@ class DeviseCreateEmpleados < ActiveRecord::Migration
 
       t.string :Nombre
       t.string :Direccion
-      t.String :Telefono
+      t.string :Telefono
       t.string :role
       t.float :Sueldo
 

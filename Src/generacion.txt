@@ -1,15 +1,23 @@
 rails new -d=mysql
-
+#modificar password de la base de datos
+rake db:create
 #agrega a gem file
  gem 'devise'
- gem 'cancancan'
+ gem 'cancancan', '~> 1.10'
+
+rails g cancan:ability
 
 rails generate devise:install
+# cambio en el archivo config/initiallizers/devise.rb
+#	config.scoped_views = true
 
-
-
-
-
+rails generate devise Empleado Nombre:string Direccion:string Telefono:string role:string Sueldo:float
+#modifica modelos para agregar los roles
+ 
+rails generate controller PEmpleado index new edit
+#agrega a routes.rb
+#	resources :pempleado, :controller => "pempleado"
 
 #https://github.com/plataformatec/devise/wiki/How-To:-Manage-Users-with-an-Admin-Role-(CanCan-method)
-rails g controller Empleado index new create edit update destroy
+
+
