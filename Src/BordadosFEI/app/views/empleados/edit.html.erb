@@ -1,2 +1,65 @@
-<h1>Empleados#edit</h1>
-<p>Find me in app/views/empleados/edit.html.erb</p>
+
+<h2>Actualiza empleado</h2>
+
+<%= form_for @empleado, url: {action: "update"} do |f| %>
+  <% if @empleado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@empleado.errors.count, "error") %> prohibited this pedido from being saved:</h2>
+
+      <ul>
+      <% @empleado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+	<% end %>
+	
+	<div class="field">
+    <%= f.label :Nombre %><br />
+    <%= f.text_field :Nombre, autofocus: true %>
+	</div>
+	
+ 	<div class="field">
+    <%= f.label :Direccion %><br />
+    <%= f.text_field :Direccion, autofocus: true %>
+	</div>
+
+ 	<div class="field">
+    <%= f.label :Telefono %><br />
+    <%= f.text_field :Telefono, autofocus: true %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label 'Puesto' %>
+		<div>
+			<%= f.collection_select(:role, Empleado::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+		</div>
+	</div>
+
+	<div class="field">
+    <%= f.label :Sueldo %><br />
+    <%= f.text_field :Sueldo, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+	</div>
+
+  <div class="actions">
+    <%= f.submit "Registrar" %>
+  </div>
+<% end %></p>

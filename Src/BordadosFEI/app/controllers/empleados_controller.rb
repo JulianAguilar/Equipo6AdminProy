@@ -23,9 +23,23 @@ class EmpleadosController < ApplicationController
 			render :action => 'new'
 		end
 	end
-
+	def destroy
+		@empleado = Empleado.find(params[:id])
+		@empleado.destroy
+		redirect_to root_path
+	end
   def edit
+		@empleado = Empleado.find(params[:id])
   end
+
+	def update
+		if @empleado.update_without_password(empleado_params)
+			flash[:notice] = "Se ha actualizado el empleado"
+		else 
+			flash[:error] = "No se ha realizado la actualizacion"
+		end
+		redirect_to root_path
+	end
 
   def show
   end

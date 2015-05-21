@@ -1,6 +1,7 @@
 class ProductosController < ApplicationController
-  before_action :set_producto, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_empleado!
+	before_action :set_producto, only: [:show, :edit, :update, :destroy]
+	layout 'LEmpleado'
   respond_to :html
 
   def index

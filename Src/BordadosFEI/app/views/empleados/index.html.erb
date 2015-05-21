@@ -8,6 +8,8 @@
 			<th>Puesto</th>
 			<th>Sueldo</th>
 			<th>Email</th>
+			<th>Actualizar</th>
+			<th>Eliminar</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -19,6 +21,8 @@
 				<td><%= empleado.role%></td>
 				<td><%= empleado.Sueldo%></td>
 				<td><%= empleado.email %></td>
+				<td><%= link_to 'Actualizar', edit_empleado_path(empleado.id) %></td>
+				<td><%= link_to 'Eliminar',elimina_empleado_path(empleado), data: {confirm: '¿Estas seguro?'} %></td>
       </tr>
     <% end %>
 	</tbody>

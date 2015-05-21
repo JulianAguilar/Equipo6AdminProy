@@ -1,0 +1,26 @@
+<h1>Recibir Pago</h1>
+
+<p>SubTotal: <%= @pago.PrecioSinIva %></p>
+<p>Total: <%= @pago.PrecioTotal %></p>
+<%= link_to 'Pagar', pagar_path(@pedido) %>
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th>Cantidad</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @pedido.Mercancias.each do |mercancia|  %>
+			<tr>
+							<td><%= mercancia.Producto.Nombre %></td>
+							<td><%= mercancia.Descripcion %></td>
+							<td><%= mercancia.Cantidad %></td>
+							<td><%= mercancia.Producto.Costo * mercancia.Cantidad %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+

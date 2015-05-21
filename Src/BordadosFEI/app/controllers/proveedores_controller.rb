@@ -1,7 +1,7 @@
 class ProveedoresController < ApplicationController
 	before_action :authenticate_empleado!
   before_action :set_proveedor, only: [:show, :edit, :update, :destroy]
-
+	layout 'LEmpleado'
   respond_to :html
 
   def index

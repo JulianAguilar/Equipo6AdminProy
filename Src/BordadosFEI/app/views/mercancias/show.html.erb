@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @mercancia.Descripcion %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @mercancia.Cantidad %>
+</p>
+
+<p>
+  <strong>Pedido:</strong>
+  <%= @mercancia.Pedido %>
+</p>
+
+<p>
+  <strong>Producto:</strong>
+  <%= @mercancia.Producto %>
+</p>
+
+<%= link_to 'Edit', edit_mercancia_path(@mercancia) %> |
+<%= link_to 'Back', mercancias_path %>

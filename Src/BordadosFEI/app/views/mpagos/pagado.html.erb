@@ -1,0 +1,29 @@
+<table>
+	<thead>
+		<td>Id pedido</td>
+		<td>Cliente </td>
+		<td>Fecha</td>
+		<td>Total</td>
+	</thead>
+	<tbody>
+	<% @pedidos.each do |pedido| %>
+		<% if pedido.Pago != nil %>
+			<% 	@total = 0
+					pedido.Mercancias.each do |mercancia|
+						@total = @total + (mercancia.Producto.Costo * mercancia.Cantidad)
+					end
+			 %>
+
+			<tr>
+				<td><%= pedido.id %></td>
+				<td><%= pedido.Cliente.Nombre %></td>
+				<td><%= pedido.Pago.FechaPago %>
+				<td><%= @total %></td>	
+				<td><%= link_to 'Ver', muestra_pedido_path(pedido.id) %></td>
+
+			</tr>
+
+		<% end %>
+	<% end %>
+	</tbody>
+</table>

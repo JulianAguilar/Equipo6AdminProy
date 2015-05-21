@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @material.Nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @material.Descripcion %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @material.Cantidad %>
+</p>
+
+<p>
+  <strong>Unidad:</strong>
+  <%= @material.Unidad %>
+</p>
+
+<p>
+  <strong>Costounidad:</strong>
+  <%= @material.CostoUnidad %>
+</p>
+
+<p>
+  <strong>Costototal:</strong>
+  <%= @material.CostoTotal %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @material.Proveedor.Nombre %>
+</p>
+
+<%= link_to 'Edit', edit_material_path(@material) %> |
+<%= link_to 'Back', materiales_path %>

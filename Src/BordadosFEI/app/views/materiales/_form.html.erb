@@ -1,0 +1,43 @@
+<%= form_for(@material) do |f| %>
+  <% if @material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@material.errors.count, "error") %> prohibited this material from being saved:</h2>
+
+      <ul>
+      <% @material.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+	<%= f.hidden_field :CostoTotal %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :Nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Descripcion %><br>
+    <%= f.text_field :Descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :Cantidad %><br>
+    <%= f.text_field :Cantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :Unidad %><br>
+    <%= f.text_field :Unidad %>
+  </div>
+  <div class="field">
+    <%= f.label 'Costo por unidad' %><br>
+    <%= f.text_field :CostoUnidad %>
+  </div>
+  <div class="field">
+    <%= f.label :Proveedor_id %><br>
+		<%= f.collection_select :Proveedor_id, Proveedor.order(:RFC),:id,:Nombre, include_blank: false %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Pedidos realizados</h1>
+
+<!--Listar pedidos -->
+<table>
+	<thead>
+		<tr>
+			<th>Id pedido</th>
+			<th>Fecha pedido</th>
+			<th>Confirmado</th>
+			<th>Ver</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @pedidos.each do |pedido| %>
+			<tr>
+							<td><%= pedido.id %></td>
+							<td><%= pedido.FechaPedido %></td>
+							<td><%= pedido.Confirmado	%></td>
+							<td><%= link_to 'Mostrar', muestra_pedido_path(pedido.id)
+	%></td>
+			<tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to 'Nuevo Pedido','pclientes/creapedido' %>
+
+
