@@ -1,6 +1,10 @@
-<h1>Editing material</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @material %> |
-<%= link_to 'Back', materiales_path %>
+<div class="panel panel-default">
+<div class="panel-heading"><h1>Editar material</h1> </div>
+<div class="panel-body">
+	<%= render 'form' %>
+</div>
+<div class="panel-footer">
+<%= link_to 'Mostrar', @material, class: "btn btn-primary" %>
+<%= link_to 'Regresar', materiales_path, class: "btn btn-default" %>
+</div>
+</div>

@@ -1,13 +1,15 @@
-<h1>Pedidos realizados</h1>
-
-<!--Listar pedidos -->
-<table>
+<div class="panel panel-default">
+	<div class="panel-heading">Pedidoss realizados</div>
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>Id pedido</th>
 			<th>Fecha pedido</th>
+			<th>Total</th>
 			<th>Confirmado</th>
-			<th>Ver</th>
+			<th></th>
+			<th></th>
+
 		</tr>
 	</thead>
 	<tbody>
@@ -15,14 +17,28 @@
 			<tr>
 							<td><%= pedido.id %></td>
 							<td><%= pedido.FechaPedido %></td>
-							<td><%= pedido.Confirmado	%></td>
-							<td><%= link_to 'Mostrar', muestra_pedido_path(pedido.id)
-	%></td>
+							<td>
+								<% @to = 0 %>
+								<% pedido.Mercancias.each do |mercancia|  %>
+									<% @to = mercancia.Producto.Costo * mercancia.Cantidad %>
+								<% end %>
+								<%= @to %>
+							</td>
+							<% if pedido.Confirmado == true%>
+								<td>Procesando</td>
+							<% else %>
+								<td>Sin confirmar</td>
+							<% end %>
+							<td><%= link_to 'Mostrar', muestra_pedido_path(pedido.id), class: "btn btn-default"%></td>
+							<% if pedido.Confirmado != true %>
+								<td> <%= link_to 'Eliminar', elimina_pedido_path(pedido), class: "btn btn-danger" %></td>
+							<% end %>
 			<tr>
 		<% end %>
 	</tbody>
 </table>
-
-<%= link_to 'Nuevo Pedido','pclientes/creapedido' %>
+<div class="panel-footer">
+<%= link_to 'Nuevo Pedido','pclientes/creapedido', class: "btn btn-success" %>
+</div>
 
 

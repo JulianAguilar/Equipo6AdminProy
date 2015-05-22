@@ -1,6 +1,6 @@
-<h1>Listing proveedores</h1>
-
-<table>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Proveedores</h1></div>
+  <table class="table table-striped">
   <thead>
     <tr>
       <th>Rfc</th>
@@ -18,14 +18,13 @@
         <td><%= proveedor.Nombre %></td>
         <td><%= proveedor.Direccion %></td>
         <td><%= proveedor.Telefono %></td>
-        <td><%= link_to 'Mostra', proveedor %></td>
-        <td><%= link_to 'Editar', edit_proveedor_path(proveedor) %></td>
-        <td><%= link_to 'Eliminar', proveedor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostra', proveedor, class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_proveedor_path(proveedor), class: "btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Eliminar', proveedor, method: :delete, data: { confirm: '¿Estas seguro?' }, class: "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nuevo Proveedor', new_proveedor_path %>
+<div class="panel-footer">
+<%= link_to 'Nuevo Proveedor', new_proveedor_path, class: "btn btn-success" %>
+</div>

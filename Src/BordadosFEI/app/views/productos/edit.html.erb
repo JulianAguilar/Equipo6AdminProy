@@ -1,6 +1,11 @@
-<h1>Editing producto</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @producto %> |
-<%= link_to 'Back', productos_path %>
+<div class="panel panel-default">
+<div class="panel-heading"><h1>Editar Producto</h1> </div>
+<div class="panel-body">
+	<%= render 'form' %>
+</div>
+<div class="panel-footer">
+<%= link_to 'Ver', @producto, class: "btn btn-primary" %> 
+<%= link_to 'Regresar', productos_path, class: "btn btn-default" %>
+</div>
+</div>

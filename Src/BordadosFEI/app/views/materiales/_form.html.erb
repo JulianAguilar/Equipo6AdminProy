@@ -1,43 +1,68 @@
-<%= form_for(@material) do |f| %>
-  <% if @material.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@material.errors.count, "error") %> prohibited this material from being saved:</h2>
 
-      <ul>
-      <% @material.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= form_for(@material,html: {class: 'form-horizontal'} ) do |f| %>
+  <% if @material.errors.any? %>
+   <div class="form-group row">
+     <div class="col-sm-2"></div>
+     <div  class=" col-sm-8 ">
+         <div class="alert alert-danger">
+                 <% if @material.errors.count > 1 %>
+           <h3>Han ocurrido <%= @material.errors.count %>  errores:</h3>
+         <% else %> 
+           <h3>Han ocurrido un error:</h3>
+         <% end %>
+         <ul>
+           <% @material.errors.full_messages.each do |message| %>
+               <li><%= message %></li>
+           <% end %>
+         </ul>
+       </div>
+     </div>
+   </div>
+   <br>
   <% end %>
 	
 	<%= f.hidden_field :CostoTotal %>
 
-  <div class="field">
-    <%= f.label :Nombre %><br>
-    <%= f.text_field :Nombre %>
+  <div class="form-group row">
+    <%= f.label :Nombre, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :Nombre , class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Descripcion %><br>
-    <%= f.text_field :Descripcion %>
+  <div class="form-group row">
+    <%= f.label :Descripcion , class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :Descripcion , class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Cantidad %><br>
-    <%= f.text_field :Cantidad %>
+  <div class="form-group row">
+    <%= f.label :Cantidad , class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :Cantidad , class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Unidad %><br>
-    <%= f.text_field :Unidad %>
+  <div class="form-group row">
+    <%= f.label :Unidad , class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :Unidad , class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label 'Costo por unidad' %><br>
-    <%= f.text_field :CostoUnidad %>
+  <div class="form-group row">
+    <%= f.label 'Costo por unidad', class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :CostoUnidad, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Proveedor_id %><br>
-		<%= f.collection_select :Proveedor_id, Proveedor.order(:RFC),:id,:Nombre, include_blank: false %>
+  <div class="form-group row">
+    <%= f.label :Proveedor_id , class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+		  <%= f.collection_select :Proveedor_id, Proveedor.order(:RFC),:id,:Nombre, include_blank: false , hatml: {class: "form-control dropdown-toggle"} %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group row">
+    <div class="col-sm-2"></div>      
+    <div class="col-sm-2">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

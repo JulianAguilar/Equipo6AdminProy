@@ -4,20 +4,43 @@ rake db:create
 #agrega a gem file
  gem 'devise'
  gem 'cancancan', '~> 1.10'
+ gem "twitter-bootstrap-rails"
 
+rails generate bootstrap:install static
 rails g cancan:ability
-
 rails generate devise:install
+
 # cambio en el archivo config/initiallizers/devise.rb
 #	config.scoped_views = true
 
 rails generate devise Empleado Nombre:string Direccion:string Telefono:string role:string Sueldo:float
 #modifica modelos para agregar los roles
- 
-rails generate controller PEmpleado index new edit
-#agrega a routes.rb
-#	resources :pempleado, :controller => "pempleado"
 
-#https://github.com/plataformatec/devise/wiki/How-To:-Manage-Users-with-an-Admin-Role-(CanCan-method)
+rails g bootstrap:layout LEmpleado
+rails generate devise:views Empleados -v sessions
 
+
+#link que use para los roles https://github.com/plataformatec/devise/wiki/How-To:-Manage-Users-with-an-Admin-Role-(CanCan-method)
+
+#agregada la linea a config/initializer/inflections.rb
+#	inflect.irregular 'proveedor', 'proveedores'
+
+rails g scaffold Proveedor RFC:string Nombre:string Direccion:string Telefono:string
+
+rails  g scaffold  Producto Nombre:string Descripcion:text Costo:float
+
+rails generate scaffold Material Nombre:string Descripcion:string Cantidad:float Unidad:string CostoUnidad:float CostoTotal:float Proveedor:references
+
+rails generate devise Cliente Nombre:string Direccion:string Telefono:string
+rails g controller Pclientes index
+rails g bootstrap:layout LCliente
+
+rails g devise:views Empleados -v registrations sessions
+
+rails g model Pedido FechaPedido:date Confirmado:boolean Cliente:references
+rails g controller Pedidos index
+
+rails g model Pago  FechaPago:date PrecioTotal:float PrecioSinIva:float Pedido:references
+
+rails g scaffold Mercancia Descripcion:string Cantidad:float Pedido:references Producto:references
 

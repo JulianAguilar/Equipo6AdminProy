@@ -1,3 +1,6 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Materia prima</h1></div>
+  <div class="panel-body">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -34,6 +37,8 @@
   <strong>Proveedor:</strong>
   <%= @material.Proveedor.Nombre %>
 </p>
-
-<%= link_to 'Edit', edit_material_path(@material) %> |
-<%= link_to 'Back', materiales_path %>
+  </div>
+  <div class="panel-footer">
+<%= link_to 'Editar', edit_material_path(@material), class: "btn btn-primary" %> 
+<%= link_to 'Regresar', materiales_path, class: "btn btn-default" %>
+</div>

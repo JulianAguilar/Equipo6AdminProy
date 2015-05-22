@@ -1,65 +1,100 @@
-
-<h2>Crear un nuevo empleado</h2>
-
+<div class="panel panel-default">
+<div class="panel-heading">
+<h2>Nuevo empleado</h2>
+</div>
+<div class="panel-body">
 <%= form_for @empleado, url: {action: "create"} do |f| %>
+  
+
   <% if @empleado.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@empleado.errors.count, "error") %> prohibited this pedido from being saved:</h2>
+   <div class="form-group row">
+     <div class="col-sm-2"></div>
+     <div  class=" col-sm-8 ">
+         <div class="alert alert-danger">
+                 <% if @empleado.errors.count > 1 %>
+           <h3>Han ocurrido <%= @empleado.errors.count %>  errores:</h3>
+         <% else %> 
+           <h3>Han ocurrido un error:</h3>
+         <% end %>
+         <ul>
+           <% @empleado.errors.full_messages.each do |message| %>
+               <li><%= message %></li>
+           <% end %>
+         </ul>
+       </div>
+     </div>
+   </div>
+   <br>
+  <% end %>
+	
+	<div class="form-group row">
+    <%= f.label :Nombre, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :Nombre, autofocus: true, class: "form-control" %>
+  </div>
+	</div>
+	
+ 	<div class="form-group row">
+    <%= f.label :Direccion, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :Direccion, autofocus: true , class: "form-control" %>
+  </div>
+	</div>
 
-      <ul>
-      <% @empleado.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-	<% end %>
-	
-	<div class="field">
-    <%= f.label :Nombre %><br />
-    <%= f.text_field :Nombre, autofocus: true %>
+ 	<div class="form-group row">
+    <%= f.label :Telefono, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :Telefono, autofocus: true , class: "form-control" %>
+  </div>
 	</div>
 	
- 	<div class="field">
-    <%= f.label :Direccion %><br />
-    <%= f.text_field :Direccion, autofocus: true %>
-	</div>
-
- 	<div class="field">
-    <%= f.label :Telefono %><br />
-    <%= f.text_field :Telefono, autofocus: true %>
-	</div>
-	
-	<div class="form-group">
-		<%= f.label 'Puesto' %>
-		<div>
-			<%= f.collection_select(:role, Empleado::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+	<div class="form-group row">
+		<%= f.label 'Puesto', class: "col-sm-2 control-label" %>
+		<div class="col-sm-10">
+			<%= f.collection_select(:role, Empleado::ROLES, :to_s, lambda{|i| i.to_s.humanize}, class: "form-control" ) %>
 		</div>
 	</div>
-
-	<div class="field">
-    <%= f.label :Sueldo %><br />
-    <%= f.text_field :Sueldo, autofocus: true %>
+  <div class="form-group row">
+    <%= f.label :Sueldo, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :Sueldo, autofocus: true , class: "form-control" %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="form-group row">
+    <%= f.label :email, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.email_field :email, autofocus: true , class: "form-control" %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="form-group row">
+    <div class="col-sm-2">
+    <%= f.label :password, class: "control-label" %>
     <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <em>(<%= @minimum_password_length %>caracteres minimo)</em>
+    <% end %>
+  </div>
+  
+  <div class="col-sm-10">
+    <%= f.password_field :password, autocomplete: "off" , class: "form-control" %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="form-group  row">
+    <%= f.label :password_confirmation, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.password_field :password_confirmation, autocomplete: "off" , class: "form-control" %>
+  </div>
 	</div>
 
-  <div class="actions">
-    <%= f.submit "Registrar" %>
-  </div>
+  <div class="form-group row">
+   <div class="col-sm-2"></div>      
+   <div class="col-sm-2">
+     <%= f.submit "Registrar",class: "btn btn-primary" %>
+   </div>
+ </div>
 <% end %>
+</div>
+<div class="panel-footer"><%= link_to 'Regresar', :back, class: "btn btn-success"%></div>
+</div>

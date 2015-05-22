@@ -1,5 +1,8 @@
 ---
 es-MX:
+  unauthorized:
+    manage: 
+      all: "No puedes accede a esto"
   date:
     abbr_day_names:
     - dom

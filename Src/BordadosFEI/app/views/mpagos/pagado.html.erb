@@ -1,25 +1,29 @@
-<table>
-	<thead>
-		<td>Id pedido</td>
-		<td>Cliente </td>
-		<td>Fecha</td>
-		<td>Total</td>
-	</thead>
-	<tbody>
-	<% @pedidos.each do |pedido| %>
-		<% if pedido.Pago != nil %>
-			<% 	@total = 0
-					pedido.Mercancias.each do |mercancia|
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Por pagar
+	</div>
+	<table class="table table-striped">
+		<thead>
+			<td>Id pedido</td>
+			<td>Cliente </td>
+			<td>Fecha</td>a
+			<td>Total</td>
+		</thead>
+		<tbody>
+			<% @pedidos.each do |pedido| %>
+				<% if pedido.Pago != nil %>
+					<% 	@total = 0
+						pedido.Mercancias.each do |mercancia|
 						@total = @total + (mercancia.Producto.Costo * mercancia.Cantidad)
 					end
-			 %>
+			 	%>
 
 			<tr>
 				<td><%= pedido.id %></td>
 				<td><%= pedido.Cliente.Nombre %></td>
 				<td><%= pedido.Pago.FechaPago %>
 				<td><%= @total %></td>	
-				<td><%= link_to 'Ver', muestra_pedido_path(pedido.id) %></td>
+				<td><%= link_to 'Ver', muestra_pedido_path(pedido.id), class: "btn btn-primary" %></td>
 
 			</tr>
 
@@ -27,3 +31,4 @@
 	<% end %>
 	</tbody>
 </table>
+<div class="panel-footer"><%= link_to 'Regresar', :back, class: "btn btn-default" %></div>

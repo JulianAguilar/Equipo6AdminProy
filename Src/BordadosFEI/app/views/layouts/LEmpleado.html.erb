@@ -50,13 +50,22 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
 					<ul class="nav navbar-nav">
 									<% if can? :manage, Empleado %>
+                    <li><%= link_to "Nuevo Empleado",new_empleado_path  %></li>
+                  <% end %>
+                  <% if can? :manage, Producto %>
 										<li><%= link_to "Productos",productos_path %></li>
+                  <% end %>
+                  <% if can? :manage, Material %>
 										<li><%= link_to "Materia prima",materiales_path %></li>
+                  <% end %>
+                  <% if can? :manage, Proveedor %>
 										<li><%= link_to "Proveedores", proveedores_path%></li>
-										<li><%= link_to "Nuevo Empleado",new_empleado_path  %></li>
 									<% end %>
 									<% if can? :manage, Pago %>
-										<li><%= link_to "Pagos",mpagos_index_path %></li>
+										<li><%= link_to "Pagos recibidos",pagos_realizados_path %></li>
+                    <% if current_empleado.role == "mostrador" %>
+                      <li><%= link_to "Realizar pago",mpagos_index_path %></li>
+                    <% end %>
 									<% end %>
 						<li><%= link_to "Cerrar sesion",destroy_empleado_session_path, :method => :delete %></li>
 						

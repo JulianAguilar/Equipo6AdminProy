@@ -1,6 +1,6 @@
-<h1>Listing materiales</h1>
-
-<table>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Materia prima</h1></div>
+  <table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -24,14 +24,14 @@
         <td><%= material.CostoUnidad %></td>
         <td><%= material.CostoTotal %></td>
         <td><%= material.Proveedor.Nombre %></td>
-        <td><%= link_to 'Mostrar', material %></td>
-        <td><%= link_to 'Editar', edit_material_path(material) %></td>
-        <td><%= link_to 'Eliminar', material, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
+        <td><%= link_to 'Mostrar', material, class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_material_path(material), class: "btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Eliminar', material, method: :delete, data: { confirm: '¿Estas seguro?' }, class: "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Nuevo Material', new_material_path %>
+</table> 
+  <div class="panel-footer">
+<%= link_to 'Nuevo Material', new_material_path , class: "btn btn-success"%>
+</div>
+</div>

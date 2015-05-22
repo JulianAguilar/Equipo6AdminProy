@@ -21,4 +21,10 @@ class PedidosController < ApplicationController
 		@pedido.update(Confirmado: true)
 		redirect_to root_path
 	end
+  
+  def elimina
+    @pedido = Pedido.find(params[:id])
+    @pedido.destroy
+    redirect_to root_path
+  end
 end

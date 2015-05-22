@@ -1,29 +1,47 @@
-<%= form_for(@producto) do |f| %>
+<%= form_for(@producto,html: {class: 'form-horizontal'}) do |f| %>
   <% if @producto.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
-
-      <ul>
-      <% @producto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+   <div class="form-group">
+     <div class="col-sm-2"></div>
+     <div  class=" col-sm-8 ">
+         <div class="alert alert-danger">
+                 <% if @producto.errors.count > 1 %>
+           <h3>Han ocurrido <%= @producto.errors.count %>  errores:</h3>
+         <% else %> 
+           <h3>Han ocurrido un error:</h3>
+         <% end %>
+         <ul>
+           <% @producto.errors.full_messages.each do |message| %>
+               <li><%= message %></li>
+           <% end %>
+         </ul>
+       </div>
+     </div>
+   </div>
+   <br>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Nombre %><br>
-    <%= f.text_field :Nombre %>
+ <div class="form-group">
+    <%= f.label :Nombre, class: "col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :Nombre , class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Descripcion %><br>
-    <%= f.text_area :Descripcion %>
+  <div class="form-group">
+    <%= f.label :Descripcion, class: "col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_area :Descripcion , class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Costo %><br>
-    <%= f.text_field :Costo %>
+  <div class="form-group">
+    <%= f.label :Costo , class: "col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :Costo , class: "form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="form-group">
+ <div class="col-sm-2"></div>      
+  <div class="col-sm-2">
+     <%= f.submit class: "btn btn-primary" %>
+   </div>
+ </div>
 <% end %>

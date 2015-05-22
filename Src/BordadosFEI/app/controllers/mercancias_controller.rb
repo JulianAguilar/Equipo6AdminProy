@@ -1,6 +1,6 @@
 class MercanciasController < ApplicationController
   before_action :set_mercancia, only: [:show, :edit, :update, :destroy]
-
+  layout 'LEmpleado'
   respond_to :html
 
   def index

@@ -1,12 +1,12 @@
-<h1>Listing productos</h1>
-
-<table>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Productos</h1></div>
+  <table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>Costo</th>
-      <th colspan="3"></th>
+      <th ></th>
     </tr>
   </thead>
 
@@ -16,14 +16,15 @@
         <td><%= producto.Nombre %></td>
         <td><%= producto.Descripcion %></td>
         <td><%= producto.Costo %></td>
-        <td><%= link_to 'Mostrar', producto %></td>
-        <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
-				<td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', producto, class: "btn btn-primary btn-xs" %>
+        <%= link_to 'Editar', edit_producto_path(producto), class: "btn btn-success btn-xs" %>
+				<%= link_to 'Eliminar', producto, method: :delete, data: { confirm: '¿Deseas eliminarlo?' }, class: "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Producto', new_producto_path %>
+<div class="panel-footer">
+<%= link_to 'Nuevo Producto', new_producto_path, class: "btn btn-primary" %>
+</div>
+</div>
