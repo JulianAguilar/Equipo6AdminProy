@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Materia prima</h1></div>
+  <div class="panel-body">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @material.Nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @material.Descripcion %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @material.Cantidad %>
+</p>
+
+<p>
+  <strong>Unidad:</strong>
+  <%= @material.Unidad %>
+</p>
+
+<p>
+  <strong>Costounidad:</strong>
+  <%= @material.CostoUnidad %>
+</p>
+
+<p>
+  <strong>Costototal:</strong>
+  <%= @material.CostoTotal %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @material.Proveedor.Nombre %>
+</p>
+  </div>
+  <div class="panel-footer">
+<%= link_to 'Editar', edit_material_path(@material), class: "btn btn-primary" %> 
+<%= link_to 'Regresar', materiales_path, class: "btn btn-default" %>
+</div>

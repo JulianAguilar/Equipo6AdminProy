@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Productos</h1></div>
+  <div class="panel-body">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @producto.Nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @producto.Descripcion %>
+</p>
+
+<p>
+  <strong>Costo:</strong>
+  <%= @producto.Costo %>
+</p>
+</div>
+<div class="panel-footer">
+<%= link_to 'Editar', edit_producto_path(@producto), class: "btn btn-primary" %> 
+<%= link_to 'Regresar', productos_path, class: "btn btn-default" %>
+</div>
