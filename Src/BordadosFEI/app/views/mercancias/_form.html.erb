@@ -1,0 +1,40 @@
+<%= form_for(@mercancia,html: {class: 'form-horizontal'} ) do |f| %>
+  <% if @mercancia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mercancia.errors.count, "error") %> prohibited this mercancia from being saved:</h2>
+
+      <ul>
+      <% @mercancia.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<div class="form-group">
+    <%= f.label :Producto_id , class: "col-sm-2 control-label" %>
+    <div class="col-sm-8">
+    <%= f.select(:Producto_id, Producto.all.collect {|a| [a.Nombre, a.id]}) %>
+  </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Descripcion, class: "col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :Descripcion , class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cantidad, class: "col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :Cantidad , class: "form-control" %>
+    </div>
+  </div>
+  
+    <%= f.hidden_field :Pedido_id %>
+ 
+  <div class="form-group">
+    <div class="col-sm-2"></div>      
+    <div class="col-sm-2">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FechaPago: 2015-05-19
+  PrecioTotal: 1.5
+  PrecioSinIva: 1.5
+  Pedido_id: 
+
+two:
+  FechaPago: 2015-05-19
+  PrecioTotal: 1.5
+  PrecioSinIva: 1.5
+  Pedido_id: 

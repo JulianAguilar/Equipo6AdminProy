@@ -1,0 +1,38 @@
+<div class="panel">
+<div class="panel-heading">
+<h1>Cliente <%= @pedido.Cliente.Nombre %></h1>
+Fecha <%= @pedido.FechaPedido %>
+</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th>Cantidad</th>
+			<th>Total</th>
+			<th>Eliminar</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @pedido.Mercancias.each do |mercancia|  %>
+			<tr>
+							<td><%= mercancia.Producto.Nombre %></td>
+							<td><%= mercancia.Descripcion %></td>
+							<td><%= mercancia.Cantidad %></td>
+							<td><%= mercancia.Producto.Costo * mercancia.Cantidad %></td>
+							<td><%= link_to 'Eliminar', mercancia, method: :delete, data: { confirm: '¿Seguro?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<div class="panel-footer">
+<% if !@pedido.Confirmado %>
+	<%= link_to 'Agregar mercancia',new_mercancia_path(Pedido: @pedido.id), class: "btn-success btn" %>
+	<div class="btn btn-primary">
+	<%= link_to 'Confirmar pedido', controller: "pedidos",action: "confirma",id: @pedido %>
+
+</div>
+<% end %>
+<%= link_to 'Regresar',root_path, class: "btn btn-default" %>
+</div>
+</div>

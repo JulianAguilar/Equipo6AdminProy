@@ -1,0 +1,23 @@
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+correcto:
+  Nombre: Camisa polo
+  Descripcion: Colo blanco
+  Costo: 34.5
+
+incorrecto_sin_nombre:
+  Nombre: 
+  Descripcion: Sin mangas
+  Costo: 56.9
+
+incorrecto_sin_descripcion:
+  Nombre: Gorra politica
+  Descripcion: 
+  Costo: 25.7
+
+incorrecto_sin_costo:
+  Nombre: Pantalon estampado
+  Descripcion: Pantalon de vestir azul
+  Costo:
+

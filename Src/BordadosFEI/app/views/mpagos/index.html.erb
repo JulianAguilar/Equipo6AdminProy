@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Empleados</div>
+<table class="table table-striped">
+
+	<thead>
+		<td>id pedido</td>
+		<td>Cliente </td>
+		<td>Total</td>
+		<td colspan=2></td>
+	</thead>
+	<tbody>
+	<% @pedidos.each do |pedido| %>
+		<% if pedido.Confirmado == true and pedido.Pago == nil %>
+			<% 	@total = 0
+					pedido.Mercancias.each do |mercancia|
+						@total = @total + (mercancia.Producto.Costo * mercancia.Cantidad)
+					end
+			 %>
+
+			<tr>
+				<td><%= pedido.id %></td>
+				<td><%= pedido.Cliente.Nombre %></td>
+				<td><%= @total %></td>		
+				<td><%= link_to 'Ver',muestra_pedido_path(pedido.id), class: "btn btn-primary btn-xs" %></td>
+
+				<td><%= link_to 'Pagar',realiza_pago_path(pedido), class: "btn btn-danger btn-xs" %></td>
+			</tr>
+
+		<% end %>
+	<% end %>
+	</tbody>
+</table>
+<div class="panel-footer"><%= link_to 'Regresar', :back, class: "btn btn-default" %></div>
+</div>

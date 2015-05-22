@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Mercancia</h1></div>
+  <table class="table table-striped">
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Cantidad</th>
+      <th>Pedido</th>
+      <th>Producto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mercancias.each do |mercancia| %>
+      <tr>
+        <td><%= mercancia.Descripcion %></td>
+        <td><%= mercancia.Cantidad %></td>
+        <td><%= mercancia.Pedido %></td>
+        <td><%= mercancia.Producto %></td>
+        <td><%= link_to 'Ver', mercancia %></td>
+        <td><%= link_to 'Editar', edit_mercancia_path(mercancia) %></td>
+        <td><%= link_to 'Mostrar', mercancia, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="panel-footer">
+<%= link_to 'Nueva Mercancia', new_mercancia_path %>
+</div>
+</div>
+
+
+
