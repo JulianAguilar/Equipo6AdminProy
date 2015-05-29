@@ -1,0 +1,16 @@
+Entrega Final del proyecto dia: Martes 19 de Mayo
+
+Partes que debe contener la entrega final:
+
+*Parte del sistema funcional
+
+*Documentacion:
+  -Estimacion : Lista casos Uso, Calculo de casos de uso, Historias de Usuario
+  -Costos : 
+  -Cambios 
+  -Aprendizaje
+  -Evaluacion Lider Proyecto
+ 
+
+**Correccion de calendario de actividades conforme a algo que no recuerdo que dijo el maestro.
+**Presentacion del trabajo 
