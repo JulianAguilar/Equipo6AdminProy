@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Empleado.new(:email => "uno@uno.uno", :password => "administracion2015", :password_confirmation => "administracion2015", :Nombre => "Administrador", :Direccion => "Bordadora FEI",:Telefono => "2211334455",:role => "gerente", :Sueldo => 2500).save!
+
